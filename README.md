@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **This is an independent fork of [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) that welcomes AI-assisted (LLM) contributions.** It is not affiliated with or endorsed by RHH. Upstream bans LLM-assisted work, so do not send AI-assisted issues or PRs there or ask about this fork in their Discord. Contribute here instead: read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`AGENTS.md`](AGENTS.md). All credit for the base project goes to RHH and its [contributors](CREDITS.md).
+
 # About `pokeemerald-expansion`
 
 ![Gif that shows debugging functionality that is unique to pokeemerald-expansion such as rerolling Trainer ID, Cheat Start, PC from Debug Menu, Debug PC Fill, Pokémon Sprite Visualizer, Debug Warp to Map, and Battle Debug Menu](https://github.com/user-attachments/assets/cf9dfbee-4c6b-4bca-8e0a-07f116ef891c) ![Gif that shows overworld functionality that is unique to pokeemerald-expansion such as indoor running, BW2 style map popups, overworld followers, DNA Splicers, Gen 1 style fishing, OW Item descriptions, Quick Run from Battle, Use Last Ball, Wild Double Battles, and Catch from EXP](https://github.com/user-attachments/assets/383af243-0904-4d41-bced-721492fbc48e) ![Gif that shows off a number of modern Pokémon battle mechanics happening in the pokeemerald-expansion engine: 2 vs 1 battles, modern Pokémon, items, moves, abilities, fully customizable opponents and partners, Trainer Slides, and generational gimmicks](https://github.com/user-attachments/assets/50c576bc-415e-4d66-a38f-ad712f3316be)
@@ -44,7 +47,7 @@ If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Paw
 For detailed documentation, visit the [pokeemerald-expansion documentation page](https://rh-hideout.github.io/pokeemerald-expansion/).
 
 # [Contributions](CONTRIBUTING.md)
-If you are looking to [report a bug](CONTRIBUTING.md#Bug-Report), [open a pull request](CONTRIBUTING.md#Pull-Requests), or [request a feature](CONTRIBUTING.md#Feature-Request), our [`CONTRIBUTING.md`](CONTRIBUTING.md) has guides for each.
+If you are looking to [report a bug](CONTRIBUTING.md#Bug-Report), [open a pull request](CONTRIBUTING.md#Pull-Requests), or [request a feature](CONTRIBUTING.md#Feature-Request), our [`CONTRIBUTING.md`](CONTRIBUTING.md) has guides for each. AI-assisted contributions are welcome in this fork, provided they build, pass the test suite and are disclosed; see the [AI-assisted contributions policy](CONTRIBUTING.md#ai-assisted-contributions-policy).
 
 # [Community](https://discord.gg/6CzjAG6GZk)
 

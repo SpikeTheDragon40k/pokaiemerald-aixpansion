@@ -1,20 +1,28 @@
-# Contributing to pokeemerald-expansion
+# Contributing to this pokeemerald-expansion fork
 
 First off, thanks for helping improve `pokeemerald-expansion`! ❤️
 
 All contributions are encouraged and valued. Please make sure to read the relevant section before making your contribution! It will make it a lot easier for you and the maintainers. We're excited to see your contributions. 🎉
 
-## Large Language Models (AI) Policy
-- All contributions must not be generated or assisted by a large language model (AI). 
-- Your code and text must be made by a human, not a large langage model (LLM). LLM-generated assets (graphics, music, etc.) are also not permitted.
-- If a maintainer believes something was written with LLM assistance, it will be closed.
-- All communication to reviewers (PR descriptions, review responses) must be written by the contributor, not an LLM.
-- Repeat violators of this policy will be banned.
+## AI-Assisted Contributions Policy
 
-> What constitutes LLM-assistance?
-- Banned "LLM-assistance" entails using the LLM to write your text and code, or to create assets such as music or graphics.
-- Using an LLM in other ways related to your submission is not encouraged. As this is undetectable, we are asking contributors to be honest. If you do not believe the work involved in the contribution was overwhelmingly performed by humans, do not open a PR.
-- We actively encourage members of the community to learn how they can. While we do not recommend using an LLM to do so, learning is learning, and we have no intention of preventing your contributions.
+This is an **independent fork** of [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion). Unlike upstream, **this fork welcomes contributions written with help from large language models (LLMs)**, such as Claude, ChatGPT, Copilot or local models. Use these tools to build features that would take much longer to write by hand.
+
+AI does not lower the bar. Every PR, however it was written, must meet the same rules:
+
+1. **It builds.** `make -j$(nproc)` must succeed for Emerald, and `make firered` and `make leafgreen` must not break.
+2. **The tests pass.** `make check -j$(nproc)` must pass with no new failures. CI runs both on every PR.
+3. **New behaviour has tests.** Battle mechanics, items, abilities and moves need tests in `test/`. See the [testing system guide](docs/tutorials/how_to_testing_system.md). Do not delete, skip or weaken tests to get CI green.
+4. **It follows the [style guide](docs/STYLEGUIDE.md)** and its principles: minimally invasive, behind a config where it makes sense, and no save-format changes without discussion.
+5. **You disclose it.** Fill in the "AI assistance" section of the PR template: which tools you used and what you checked by hand.
+6. **You are accountable.** You must understand the code you submit and be able to answer review questions about it. "The AI wrote it" is not an answer. Answers that are wrong, made up, or only pasted from a model will get a PR closed.
+7. **Keep PRs focused.** One feature or fix per PR. Huge, sweeping generated diffs are hard to review and will be asked to be split.
+
+LLM-generated assets (graphics, music) are accepted only if you have the right to use them and you say so in the PR.
+
+> ⚠️ **Do not send AI-assisted work upstream.** `rh-hideout/pokeemerald-expansion` bans LLM-assisted contributions and repeat violators. Please respect their rules: open AI-assisted PRs here, against this fork.
+
+Agents and their users should read [`AGENTS.md`](AGENTS.md) first: it explains how to build, test and navigate this codebase.
 
 ## Bug Reports
 
@@ -47,7 +55,7 @@ This section guides you through submitting a feature request for pokeemerald-exp
 
 ### What should I do before making a feature request?
 
-- Make sure your request is in [pokeemerald-expansion's scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, you can start a discussion thread in the [#pr-discussions](https://discord.com/channels/419213663107416084/1102784418369785948) channel of the [the RHH Discord Server](https://discord.gg/6CzjAG6GZk).
+- Make sure your request is in [pokeemerald-expansion's scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue on this fork](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
 
 ### What should I do before making a feature request?
 
@@ -66,12 +74,12 @@ To request a feature to be added to the project, open a [feature request](https:
 
 ## Pull Requests
 
-If you have read all of this and still need help, feel free to start a thread in #pr-discussions of the Discord server or ask questions in #expansion-dev.
+If you have read all of this and still need help, feel free to open an [issue on this fork](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues). Please do not ask about this fork in the RHH Discord server.
 
 ### What should I do before starting a pull request?
 
 - If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/) has a [guide on forking and cloning the repository](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/The-Basics-of-GitHub). Make sure you have a [local copy](INSTALL.md) of `pokeemerald-expansion`.
-- Make sure your contribution is in [scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, you can start a discussion thread in the [#pr-discussions](https://discord.com/channels/419213663107416084/1102784418369785948) channel of the [the RHH Discord Server!](https://discord.gg/6CzjAG6GZk).
+- Make sure your contribution is in [scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue on this fork](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
 - Choose a branch to contribute your PR to:
     - **`master`**: If your PR contains meets any of the following criteria, it should go to `master`:
       - Fixes for bugs that are currently present in the `master` branch
@@ -86,10 +94,10 @@ If you have read all of this and still need help, feel free to start a thread in
 #### 1. Get a working local copy
 If you haven't already, follow [INSTALL.md](INSTALL.md) to get a working local copy of `pokeemerald-expansion`.
 
-#### 2. Set RHH as a remote
-This will designate the main `pokeemerald-expansion` repository as a remote.
+#### 2. Set this fork as a remote
+This will designate this fork as a remote. (Upstream RHH can also be added to read their history, but AI-assisted PRs must not be opened there.)
 ```bash
-git remote add RHH https://github.com/rh-hideout/pokeemerald-expansion # You can replace RHH with anything you want. This tutorial assumes you used RHH.
+git remote add fork https://github.com/SpikeTheDragon40k/porkeemerald-explansion # You can replace fork with anything you want.
 ```
 
 #### 3. Create a new branch
@@ -120,7 +128,7 @@ git push --set-upstream origin newFeature
 ```
 
 #### 7. Open Pull Request
-Once your work is complete and pushed to the branch on Github, you can open a [pull request from your branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork), targeting the branch you've chosen from `pokeemerald-expansion`. Please fill out the pull request description as completely as possible.
+Once your work is complete and pushed to the branch on Github, you can open a [pull request from your branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork), targeting the branch you've chosen in **this fork** (not upstream RHH). Please fill out the pull request description as completely as possible.
 
 ### What happens after I submit a pull request?
 
@@ -137,20 +145,7 @@ Once all items on the merge checklist are true, the branch will be merged in.
 
 ## Maintainers
 
-This list was last updated 2026 May 2.
-
-| Name | Discord | Currently Active | Areas of Expertise |
-| --- | --- | --- | --- |
-| [Alex](https://github.com/AlexOn1ine) | rainonline | ✅ | Battle Engine, Battle AI
-| [PhallenTree](https://github.com/PhallenTree) | phallentree | ✅ | Battle Engine
-| [Jasper](https://github.com/Bassoonian) | bassoonian | ✅ | Berries, Day / Night System, Followers, Feature Branches
-| [MGriffin](https://github.com/mrgriffin) | mgriffin | ✅ | Tests, Trainer Control
-| [psf](https://github.com/pkmnsnfrn) | pkmnsnfrn | ✅ | Rematches, Difficulty, Trainer Slides, Fake RTC, Fishing Minigames, Imperial / Metric, OW Item Balls, Sky Battles, Defog
-| [Hedara](https://github.com/hedara90) | hedara | ✅ | Compression, Sprites
-| [Pawkkie](https://github.com/Pawkkie) | pawkkie | ✅ | Battle AI
-| [SBird](https://github.com/SBird1337) | karathan | ✅ | Dynamic Multichoice, Damage Calculation, Animations, Trainer Control, Tests
-| [Jamie](https://github.com/FosterProgramming) | foster_harmony | ✅ | Overworld, Tests, Day / Night System, Dexnav, Battle Frontier, HGSS Dex, Pokerus, Learnsets, Mon Generation, Vs Seeker
-| [grintoul](https://github.com/grintoul1) | grintoul | ✅ | Tests, Battle AI, Battle Engine, Overworld, Trainer Slides, Follower NPCs, Multi Battles
+This fork is maintained by [SpikeTheDragon40k](https://github.com/SpikeTheDragon40k). The people who maintain upstream `pokeemerald-expansion` are listed in [upstream's CONTRIBUTING.md](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/CONTRIBUTING.md#maintainers); they are not involved in this fork, so please do not contact them about it.
 
 ## Attribution
 This guide is based on the [contributing.md](https://contributing.md/generator)!

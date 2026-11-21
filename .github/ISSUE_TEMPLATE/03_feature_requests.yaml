@@ -10,10 +10,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Large Language Model (AI) Policy
-        All contributions must not be generated or assisted by a large language model (AI). 
-        Your code and text must be made by a human, not a large langage model (LLM). LLM-generated assets (graphics, music, etc.) are also not permitted.
-        If a maintainer believes something was written with LLM assistance, it will be closed.
+        ## AI-Assisted Contributions Welcome
+        This fork welcomes issues and code written with help from large language models (LLMs).
+        Please say which tools you used, and check the output yourself before posting: you are responsible for what you submit.
         For more information, please read [`CONTRIBUTING.md`](../../CONTRIBUTING.md).
 
   - type: textarea
