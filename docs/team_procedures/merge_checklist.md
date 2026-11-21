@@ -7,7 +7,7 @@ This document is a guide for maintainers to account for all the reccomended step
 # Checklist
 
 ## Is the branch's theoretical functionality in scope?
-If you're not sure if a branch's functionality is [in scope](scope.md), start a conversation on Discord to resolve.
+If you're not sure if a branch's functionality is [in scope](scope.md), open an issue to discuss it.
 
 ## Does the branch successfully compile?
 From `make clean`, the branch should locally compile.
@@ -46,9 +46,6 @@ This applies to code that comes from other branches or games.
 
 ## Is the pull request appropriately labeled?
 Without labels, the CHANGELOG will not be properly formatted. For specifically the `bugfix` label, an additional label, detailing what area the bug exists in is required.
-
-## Is `pokeemerald-expansion` free from a merge freeze?
-Our [release schedule](schedule.md) prevents us from merging Big Features and non-bugfixes within certain dates close to a release. Please use `/release` in the RHH Discord to clarify when these are occuring.
 
 # Merging
 

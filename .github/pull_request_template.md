@@ -1,6 +1,6 @@
 <!--- Provide a descriptive title that describes what was changed in this PR. --->
 
-<!--- CONTRIBUTING.md : https://github.com/rh-hideout/pokeemerald-expansion/blob/master/CONTRIBUTING.md --->
+<!--- CONTRIBUTING.md : https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/CONTRIBUTING.md --->
 
 <!--- Before submitting, ensure the following:--->
 
@@ -12,9 +12,7 @@
 <!--- No merge conflicts with the target branch. --->
 <!--- If any of the above are not true, submit the PR as a draft. --->
 
-<!-- ⚠️ WARNING ⚠️ -->
-<!-- All contributions must not be generated or assisted by a large language model (AI). --->
-<!-- You can learn more about our AI policy by reading CONTRIBUTING.md, linked above. --->
+<!-- AI-assisted contributions are welcome in this fork. Read CONTRIBUTING.md and AGENTS.md, linked above. --->
 
 ## Description
 <!-- Detail the changes made, why they were made, and any important context. -->
@@ -26,11 +24,9 @@
 <!-- Format: "Fixes #2345, fixes #4523, closes #2222." Remove this section if not applicable.-->
 
 <!-- CREDITS -->
-<!-- Once your PR is submitted, leave a comment asking the bot to add you to the credits. -->
-<!-- If anybody helped with this PR, please encourage them to comment on your PR and ask the bot to add them to the credits. -->
-<!-- If somebody has contributed at any point and has indicated they wish to be credited, please ask the bot to add them to the credits. If they do not have a known GitHub account, add them to the list at bottom of `CREDITS.md`. -->
+<!-- Once your PR is submitted, add yourself to CREDITS.md or ask to be added. -->
+<!-- If anybody helped with this PR and wishes to be credited, add them to `CREDITS.md` too. -->
 <!-- EVERY contribution matters! -->
-<!-- https://github.com/rh-hideout/pokeemerald-expansion/wiki/CREDITS.md-Frequently-Asked-Questions -->
 
 ## Feature(s) this PR does NOT handle:
 <!-- If this PR contains any unfinished and non-blocking work, please list them here for clarity. -->
@@ -40,7 +36,14 @@
 <!-- Add any important details for the release changelog. Must be structed as bullet points. --->
 <!--- Remove this section if not applicable. --->
 
-## Discord contact info
-<!-- Add your Discord username for any follow-up questions (e.g., pcg06). -->
-<!-- If you have created a discussion thread, this is a good place to link it. -->
-<!--- Contributors must join https://discord.gg/6CzjAG6GZk -->
+## AI assistance
+<!-- Required. Write "None" if you did not use an LLM. -->
+- Tools / models used:
+- What the AI did (e.g. "wrote the first draft of the ability and its tests"):
+- What I checked by hand (e.g. "read every line, tested in mGBA, compared with Bulbapedia"):
+
+## Checklist
+- [ ] `make -j$(nproc)` builds
+- [ ] `make check -j$(nproc)` passes, with no tests deleted, skipped or weakened
+- [ ] New behaviour is covered by new tests
+- [ ] I understand this code and can answer review questions about it myself

@@ -178,15 +178,15 @@ endif
 ifeq ($(ANALYZE),1)
   override CFLAGS += -fanalyzer
 endif
-# Only throw an error for unused elements if its RH-Hideout's repo
+# Only throw an error for unused elements in this project's own CI
 ifeq ($(UNUSED_ERROR),0)
-  ifneq ($(GITHUB_REPOSITORY_OWNER),rh-hideout)
+  ifneq ($(GITHUB_REPOSITORY_OWNER),SpikeTheDragon40k)
     override CFLAGS += -Wno-error=unused-variable -Wno-error=unused-const-variable -Wno-error=unused-parameter -Wno-error=unused-function -Wno-error=unused-but-set-parameter -Wno-error=unused-but-set-variable -Wno-error=unused-value -Wno-error=unused-local-typedefs
   endif
 endif
 
 ifeq ($(DEPRECATED_ERROR),0)
-  ifneq ($(GITHUB_REPOSITORY_OWNER),rh-hideout)
+  ifneq ($(GITHUB_REPOSITORY_OWNER),SpikeTheDragon40k)
     override CFLAGS += -Wno-error=deprecated-declarations
   endif
 endif
@@ -353,7 +353,7 @@ $(TESTELF): $(OBJ_DIR)/ld_script_test.ld $(OBJS) $(TEST_OBJS) libagbsyscall tool
 	$(FIX) $@ -t"$(TITLE)" -c$(GAME_CODE) -m$(MAKER_CODE) -r$(REVISION) -d0 --silent
 	$(PATCHELF) $(TESTELF) gTestRunnerArgv "$(TESTS:%*=%)\0"
 
-ifeq ($(GITHUB_REPOSITORY_OWNER),rh-hideout)
+ifeq ($(GITHUB_REPOSITORY_OWNER),SpikeTheDragon40k)
 TEST_SKIP_IS_FAIL := \x01
 else
 TEST_SKIP_IS_FAIL := \x00

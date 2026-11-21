@@ -2,7 +2,7 @@
 
 *written by Bivurnum*
 
-![map_preview_example](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/map_preview_example.gif)
+![map_preview_example](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/map_preview_example.gif)
 
 ### [Click Here for a Guide to Creating a New Map Preview](#creating-a-new-map-preview-image)
 
@@ -81,17 +81,17 @@ static const struct MapPreviewScreen sMapPreviewScreenData[MPS_COUNT] = {
 <details>
     <summary><i>MPS_TYPE_BASIC example</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/ruins_of_alph_basic.gif)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/ruins_of_alph_basic.gif)
 </details>
 <details>
     <summary><i>MPS_TYPE_FADE_IN example</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/ruins_of_alph_fade.gif)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/ruins_of_alph_fade.gif)
 </details>
 <details>
     <summary><i>MPS_TYPE_CAVE example</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/ruins_of_alph_cave.gif)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/ruins_of_alph_cave.gif)
 </details>
 
 * `flagId` is just the name of the flag you want to set when visiting this map for the first time. The flag state determines how long the map preview will last on screen; it gets a shorter duration if the player has been to that map before. A lot of Emerald maps already have associated flags, but Petalburg Woods does not have one by default, so I repurposed one of the unused flags for use in this example. If you don't want to use a flag, you can enter `MPS_FLAG_NULL` here and the duration will have its own custom value (this can be adjusted in the configs in ***include/map_preview_screen.h***).
@@ -137,17 +137,17 @@ In the ***include/config/map_preview_screen.h*** file, there are a few configs y
 # The Image
 I'm not much of an artist myself, so I will leave the design of the image to you. For this demonstration, I have picked out a lovely [preview image](https://bulbapedia.bulbagarden.net/wiki/Location_preview#/media/File:HGSS_Ruins_of_Alph-Day.png) from the HGSS games:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/HGSS_Ruins_of_Alph-Day.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/HGSS_Ruins_of_Alph-Day.png)
 
 The GBA display is exactly 240x160 pixels, so if your base image is larger than that you will have to crop it to fit. My image is a little too wide, so I'll have to trim it down. I also want to incorporate the cinematic black bars, like they used in the FRLG games, so I'll have to trim quite a bit off of the top and bottom as well.
 
 I have created a template image that is an exact copy of the FRLG map preview, including the black bars and text box. You can find the image in the ***docs/tutorials/img/map_preview_screen/templates*** folder. Feel free to use it for your own previews:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/templates/map_preview_template.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/templates/map_preview_template.png)
 
 Now I have my map preview exactly how I want it to look in game:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/alph_map_preview_image.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/alph_map_preview_image.png)
 
 You're probably wondering why there is a big yellow bar along the right side of the image. Those extra tiles are needed because the game will load some tiles off screen. Without the yellow bar taking up that space, some of our map preview tiles would load there instead, screwing up the image. So while the GBA display is only 240x160, all map preview images must be 256x160 pixels in size. Don't worry. Those extra tiles won't show up in the game. (So you can make them whatever color you want. They don't have to be yellow.)
 
@@ -157,7 +157,7 @@ Finally, you need to make sure that the image is properly indexed.
 
 >   You just need to click `Sprite`, then `Color Mode`, then make sure the `Indexed` option is checked.
 >   
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_index_example.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_index_example.png)
 >   
 >   Make sure to save the image when you are done.
 </details>
@@ -166,11 +166,11 @@ Finally, you need to make sure that the image is properly indexed.
 
 >   You need to click `All Frames`, then `Color Depth...`.
 >   
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/gale_color_depth.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/gale_color_depth.png)
 >   
 >   Because map preview images use more than one 16-color palette, you should select the `8bpp` option. Then click `OK`.
 >   
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/gale_8bpp.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/gale_8bpp.png)
 >   
 >   Make sure to save the image when you are done.
 </details>
@@ -181,11 +181,11 @@ Now that we have our image, we need to covert it into a tile sheet and generate 
 In Tilemap Studio, we want to use the Image to Tiles feature.  
 Click on `Tools`, then `Image to Tiles...`. Alternatively, you could also click on the little orange portrait icon on the far right, shown in the image below.
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/TS_image_to_tiles.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/TS_image_to_tiles.png)
 
 This window will pop up:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/image_to_tiles_window.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/image_to_tiles_window.png)
 
 For the `Input` and `Output` options, click where it says `No file selected` and select the proper files.
 * The `Input` should be the png image you just created.
@@ -203,13 +203,13 @@ Check the box for `Color 0` and choose what color you want to use for transparen
 
 My Image to Tiles window looks like this now:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/image_to_tiles_window_filled.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/image_to_tiles_window_filled.png)
 
 Now click `OK`. You should get a little alert telling you it was a success. If you get an error about too many palettes, you may have to edit your initial image to remove some unique colors or redraw parts of the image so the multiple palettes have to share less colors between them in order to transition smoothly from one palette to another.
 
 Now it will display your new tile sheet and tilemap:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/TS_tiles.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/TS_tiles.png)
 
 # The Palettes
 You may have noticed that the colors of some of the tiles are not correct. This is FINE. The current version of Tilemap Studio (4.0.1) sets all of the pixels in the tiles.png file to use the first palette for whatever reason. However, as long as you retain the order of the colors in each palette in the png, the game will assign them the correct palette and the map preview will show up with the proper colors in-game.
@@ -228,12 +228,12 @@ The map preview palettes will be loaded into palette slots that don't interfere 
 <details>
     <summary><i>Aseprite:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_2_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_2_palettes.png)
 </details>
 <details>
     <summary><i>Graphics Gale:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/gale_2_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/gale_2_palettes.png)
 </details>
 
 My image ended up with exactly two palettes, which is an ideal situation. I'm going to move the palettes around so none of them get loaded into palette slot `E`. Palette slot `E` is reserved specifically for the colors used for the text that displays the map name.  
@@ -242,12 +242,12 @@ For now, we just want to leave the second palette empty, like so:
 <details>
     <summary><i>Aseprite:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_3_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_3_palettes.png)
 </details>
 <details>
     <summary><i>Graphics Gale:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/gale_3_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/gale_3_palettes.png)
 </details>
 
 Remember that you can move whole 16-color palettes to different positions in the png, but you should not rearrange the order of the colors within any individual 16-color palette. The Image to Tiles function sets the colors to very specific positions and you don't want to mess around with that unless you really know what you are doing.
@@ -258,12 +258,12 @@ As long as you follow what I do in my screenshots, you should be fine.
 Now go back to Tilemap Studio and click on the `Palettes` tab.  
 Here you can see what tiles will use which palettes:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/TS_palettes_initial.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/TS_palettes_initial.png)
 
 We need to change the palette numbers in the tilemap to match the palette slots they will be loaded into. The tiles marked `0` should be changed to `D`. The ones marked `1` should be changed to `F`. Shift clicking acts as a fill tool.  
 Here is what my tilemap looks like after the change:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/TS_palettes_fade_in.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/TS_palettes_fade_in.png)
 
 If your tiles.png file only has one palette, just change the whole tilemap to the `D` palette.
 
@@ -281,12 +281,12 @@ If you open the new tiles.png file in your image editor, you can see how many pa
 <details>
     <summary><i>Aseprite:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_2_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_2_palettes.png)
 </details>
 <details>
     <summary><i>Graphics Gale:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/gale_2_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/gale_2_palettes.png)
 </details>
 
 If your image has 14 palettes or less, you can [CLICK HERE](#map-name-text) to move to the next section. My image ended up with two palettes, which is a small enough number that I wouldn't have to do anything else in this section.
@@ -300,12 +300,12 @@ I'm going to show you a different example that ended up with 15 palettes:
 <details>
     <summary><i>Aseprite:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_15_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_15_palettes.png)
 </details>
 <details>
     <summary><i>Graphics Gale:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/gale_15_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/gale_15_palettes.png)
 </details>
 
 I'm going to move the palettes around so none of them get loaded into palette slot `E`. Palette slot `E` is reserved specifically for the colors used for the text that displays the map name. For now, we just want to leave the 15<sup>th</sup> palette empty, like so:
@@ -313,12 +313,12 @@ I'm going to move the palettes around so none of them get loaded into palette sl
 <details>
     <summary><i>Aseprite:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_16_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_16_palettes.png)
 </details>
 <details>
     <summary><i>Graphics Gale:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/gale_16_palettes.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/gale_16_palettes.png)
 </details>
 
 Remember that you can move whole 16-color palettes to different positions in the png, but you should not rearrange the order of the colors within any individual 16-color palette. The Image to Tiles function sets the colors to very specific positions and you don't want to mess around with that unless you really know what you are doing. It's a pain in the butt!  
@@ -332,12 +332,12 @@ Make sure to save your changes.
 
 Now go back to Tilemap Studio and click on the `Palettes` tab. Here you can see what tiles will use which palettes:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/TS_palettes_15.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/TS_palettes_15.png)
 
 We need to change the palette numbers in the tilemap to match where we moved them to in the png. Since we moved a palette from the 15<sup>th</sup> position to the 16<sup>th</sup> position, the tiles marked `E` should be changed to `F`. Shift clicking acts as a fill tool. CTRL clicking a tile will replace every tile of that palette with the selected palette.  
 Here is what my tilemap looks like after the change:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/TS_palettes_16.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/TS_palettes_16.png)
 
 Make sure to save your changes.
 
@@ -346,7 +346,7 @@ The current map's name will be printed in a text box in the upper left corner of
 
 If the map's name is longer than the standard text box size, the text box's width will automatically be extended by an extra 72 pixels. I have another FRLG template image that conforms to this larger size. You can find it in the ***docs/tutorials/img/map_preview_screen/templates*** folder.
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/templates/map_preview_template_long.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/templates/map_preview_template_long.png)
 
 The map name being loaded in separately from the image allows you to use the same map preview image for multiple different maps.
 
@@ -354,7 +354,7 @@ The map name being loaded in separately from the image allows you to use the sam
 
 Palette `E`, the one that is loaded into the second to last palette slot, is the one that the game uses for text and text boxes (not to be confused with the borders around the text boxes). While the palette is comprised of 16 colors, we are only concerned with 3 of them:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/numbered_palette.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/numbered_palette.png)
 
 * Color `1` (Red): Used for the text box itself. This is what the text gets printed on top of.
 * Color `3` (Green): Used for the shadow of the characters of text.
@@ -364,15 +364,15 @@ The positions of these colors in the palette are specific to these functions and
 
 To demonstrate this in action, here is what the map name text looks like with the colors used in FRLG. The yellow colors in the palettes are filler:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/map_name_frlg_pal.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/map_name_frlg_pal.png)
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/map_name_frlg.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/map_name_frlg.png)
 
 And here is the same map name text, but with the colors drastically changed:
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/map_name_vivid_pal.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/map_name_vivid_pal.png)
 
-![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/map_name_vivid.png)
+![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/map_name_vivid.png)
 
 The rest of the colors in this palette can be used like normal (other than the transparent color `0`). This means you can utilize the unused portion as a sort of partial 16<sup>th</sup> palette for your map preview image. This takes further skill and knowledge than I will be covering in this guide, but if you can get the colors to line up with the pixels properly, you'll have that much more versatility with the image.
 
@@ -383,12 +383,12 @@ Here is what the final palettes will look like in my Ruins of Alph tiles.png ima
 <details>
     <summary><i>Aseprite:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_complete_pal_fade.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/aseprite_complete_pal_fade.png)
 </details>
 <details>
     <summary><i>Graphics Gale:</i></summary>
 
->   ![](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/docs/tutorials/img/map_preview_screen/gale_complete_pal_fade.png)
+>   ![](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/docs/tutorials/img/map_preview_screen/gale_complete_pal_fade.png)
 </details>
 
 Once again, make sure to save your changes.
