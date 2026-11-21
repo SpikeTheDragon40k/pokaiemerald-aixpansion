@@ -454,3 +454,27 @@ SINGLE_BATTLE_TEST("Damage calculation for Protosynthesis")
         EXPECT_EQ(expectedDamage, dmg);
     }
 }
+
+// Issue: damage above 32767 used to wrap around when stored in a s16 and heal the target instead.
+// Base damage is 90 * 120 * 42 / 1 / 50 + 2 = 9074, x1.5 STAB and x4 effectiveness, so it is
+// between ~46000 and ~54500 for every damage roll: always above INT16_MAX.
+SINGLE_BATTLE_TEST("Damage calculation: damage above 32767 knocks the target out instead of healing it")
+{
+    GIVEN {
+        ASSUME(GetMoveCategory(MOVE_PSYCHIC) == DAMAGE_CATEGORY_SPECIAL);
+        ASSUME(GetMoveType(MOVE_PSYCHIC) == TYPE_PSYCHIC);
+        ASSUME(GetMovePower(MOVE_PSYCHIC) == 90);
+        ASSUME(GetSpeciesType(SPECIES_WOBBUFFET, 0) == TYPE_PSYCHIC);
+        ASSUME(GetSpeciesType(SPECIES_CROAGUNK, 0) == TYPE_POISON);
+        ASSUME(GetSpeciesType(SPECIES_CROAGUNK, 1) == TYPE_FIGHTING);
+        PLAYER(SPECIES_WOBBUFFET) { SpAttack(120); }
+        OPPONENT(SPECIES_CROAGUNK) { Level(1); SpDefense(1); }
+    } WHEN {
+        TURN { MOVE(player, MOVE_PSYCHIC); }
+    } SCENE {
+        ANIMATION(ANIM_TYPE_MOVE, MOVE_PSYCHIC, player);
+        MESSAGE("The opposing Croagunk fainted!");
+    } THEN {
+        EXPECT_EQ(opponent->hp, 0);
+    }
+}
