@@ -13,7 +13,7 @@ So you want to make a custom ruleset for a possible random pokemon you'd like to
 
 ### Setting Up Our Random Species
 
-First thing's first, we need a way for the logic to read that we want a specific kind of random mon. Add your named species generator options in [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/random_mon_generation.h), configure their rules in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h), then pass those names to `getrandomspecies` in scripts.
+First thing's first, we need a way for the logic to read that we want a specific kind of random mon. Add your named species generator options in [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/random_mon_generation.h), configure their rules in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h), then pass those names to `getrandomspecies` in scripts.
 
 ### The Random Species Struct
 
@@ -39,16 +39,16 @@ struct RandomSpeciesGeneratorOptions
 These are the options you can toggle and change to select the ideal possible species. Let's go over the options one-by-one.
 
 * `enum RandomSpeciesDexMode dexMode`: With values of either `RANDOM_MON_DEX_NATIONAL` or `RANDOM_MON_DEX_HOENN`, allows you to select whether you want to choose from your National Dex or the Hoenn Dex. If you've replaced the hoenn dex but want to use that functionality, be sure that you investigate that path and substitute any references or functions specific to the hoenn dex to parallel ones for your custom dex.
-* `const enum Species *speciesPool`: A pointer to the specific species pool you want to use, if any. Leave it NULL or create one in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h). Examples of this will come later. You can repeat values in this pool to create pseudo weights; for example, `{SPECIES_BULBASAUR, SPECIES_BULBASAUR, SPECIES_BULBASAUR, SPECIES_SQUIRTLE}` gives a 75% chance of Bulbasaur and a 25% chance of Squirtle.
+* `const enum Species *speciesPool`: A pointer to the specific species pool you want to use, if any. Leave it NULL or create one in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h). Examples of this will come later. You can repeat values in this pool to create pseudo weights; for example, `{SPECIES_BULBASAUR, SPECIES_BULBASAUR, SPECIES_BULBASAUR, SPECIES_SQUIRTLE}` gives a 75% chance of Bulbasaur and a 25% chance of Squirtle.
 * `u32 speciesPoolCount`: The total number of species in your pool, if any.
-* `const enum Species *bannedSpecies`: A pointer to the a pool containing any species of pokemon you want *banned* from selection. Leave it NULL or create one in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h). You shouldn't use this in combination with the speciesPool, as that doesn't really make sense. Leave this one NULL if you have a specific pool of species you want to pick from, or use it if you want more randomness but with some specific banning restrictions that the other options below don't allow.
+* `const enum Species *bannedSpecies`: A pointer to the a pool containing any species of pokemon you want *banned* from selection. Leave it NULL or create one in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h). You shouldn't use this in combination with the speciesPool, as that doesn't really make sense. Leave this one NULL if you have a specific pool of species you want to pick from, or use it if you want more randomness but with some specific banning restrictions that the other options below don't allow.
 * `u32 bannedSpeciesCount`: The total number of banned species in the above pool, if any.
 * `u32 banLegendary`: Whether to ban restricted legendary pokemon from selection.
 * `u32 banMythical`: Whether to ban mythical pokemon from selection.
 * `u32 banSubLegendary`: Whether to ban sub-legendary pokemon (Regi trio, genies, etc) from selection.
 * `u32 banUltraBeast`: Whether to ban ultra beast pokemon from selection.
 * `u32 banParadox`: Whether to ban paradox pokemon from selection.
-* `u32 randomizeForms`: Whether to randomize forms of pokemon. By default, megas, fusions, and in-battle transformations are disallowed. To add exceptions, see and modify `IsRandomSpeciesFormTableException` in [src/random_mon_generation.c](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/random_mon_generation.c).
+* `u32 randomizeForms`: Whether to randomize forms of pokemon. By default, megas, fusions, and in-battle transformations are disallowed. To add exceptions, see and modify `IsRandomSpeciesFormTableException` in [src/random_mon_generation.c](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/random_mon_generation.c).
 
 ### Filter Functions
 
@@ -68,7 +68,7 @@ Then select the index of the options in options array, followed by the filter fu
 
 ### Example Setup
 
-For a named random mon option, define the script-facing value in [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/random_mon_generation.h), then use that same enum value as the array index in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h). With separate species and/or ban pools, your setup would look like this:
+For a named random mon option, define the script-facing value in [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/random_mon_generation.h), then use that same enum value as the array index in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h). With separate species and/or ban pools, your setup would look like this:
 
 ```
 enum
@@ -137,7 +137,7 @@ Item randomization is handled separately from pokemon randomization, meaning tha
 
 ### Setting Up Our Random Items
 
-As we did for our random species, we need to also do for our random items. Add your named item generator options in [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/random_mon_generation.h), configure their rules in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h), then pass those names to `getrandomitem` in scripts.
+As we did for our random species, we need to also do for our random items. Add your named item generator options in [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/random_mon_generation.h), configure their rules in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h), then pass those names to `getrandomitem` in scripts.
 
 ### The Random Item Struct
 
@@ -152,9 +152,9 @@ struct RandomItemGeneratorOptions
 };
 ```
 
-* `const enum Item *heldItemPool`: A pointer to the specific item pool you want to use, if any. Leave it NULL or create one in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h). You can repeat values in this pool to create pseudo weights; for example, `{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_LUM_BERRY}` gives a 75% chance of no item and a 25% chance of Lum Berry.
+* `const enum Item *heldItemPool`: A pointer to the specific item pool you want to use, if any. Leave it NULL or create one in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h). You can repeat values in this pool to create pseudo weights; for example, `{ITEM_NONE, ITEM_NONE, ITEM_NONE, ITEM_LUM_BERRY}` gives a 75% chance of no item and a 25% chance of Lum Berry.
 * `u16 heldItemPoolCount`: The number of items in your held item pool, if any.
-* `const enum HoldEffect *bannedHoldEffects`: A pointer to the specific list of banned hold effects you want to use, if any. Leave it NULL or create one in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h).
+* `const enum HoldEffect *bannedHoldEffects`: A pointer to the specific list of banned hold effects you want to use, if any. Leave it NULL or create one in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h).
 * `u16 bannedHoldEffectsCount`: The number of banned hold effects in your pool, if any.
 * `bool32 (*filterFunc)(enum Item item, const struct FilterFuncArgs *filterFuncArgs)`: An optional item filter function. The built-in `IsHeldItemFilterFunc` only allows items with a non-`HOLD_EFFECT_NONE` hold effect. `getrandomitem` currently passes a zeroed `FilterFuncArgs` value, so custom item filters can accept the same argument struct as species filters even if the script command does not expose item filter arguments yet.
 
@@ -162,7 +162,7 @@ Key items are always blocked from random item generation, even if they are inclu
 
 ### Example Setup
 
-For a named random item option, define the script-facing value in [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/random_mon_generation.h), then use that same enum value as the array index in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h). With separate held item pools and/or hold effect ban pools, your setup would look like this:
+For a named random item option, define the script-facing value in [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/random_mon_generation.h), then use that same enum value as the array index in [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h). With separate held item pools and/or hold effect ban pools, your setup would look like this:
 
 ```
 enum
@@ -281,7 +281,7 @@ This will produce a random mon from the BST-restricted species option with betwe
 
 # Appendix: Example Randomizer Data
 
-The default [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/random_mon_generator.h) file intentionally leaves the option arrays empty. If you want a quick starting point, copy and adapt this into that file, then add matching enum names to [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/random_mon_generation.h).
+The default [src/data/random_mon_generator.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/random_mon_generator.h) file intentionally leaves the option arrays empty. If you want a quick starting point, copy and adapt this into that file, then add matching enum names to [include/constants/random_mon_generation.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/random_mon_generation.h).
 
 ```
 static const enum Species sRandomSpeciesOption1SpeciesPool[] =

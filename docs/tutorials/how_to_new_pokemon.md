@@ -52,7 +52,7 @@ Our plan is as simple as it is brilliant: clone Mewtwo... and make it even stron
 
 Our first step towards creating a new digital lifeform is to define its own species constant.
 
-Edit [include/constants/species.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/species.h):
+Edit [include/constants/species.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/species.h):
 
 ```diff
  #define SPECIES_NONE                                    0
@@ -173,7 +173,7 @@ You can also ignore switch cases for `P_GBA_STYLE_SPECIES_GFX`, as those are onl
 We'll start by adding the self-explanatory data that's also present in pret's vanilla structure:
 
 ## 3. Define its basic species information
-Edit [src/data/pokemon/species_info.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/species_info.h):
+Edit [src/data/pokemon/species_info.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/pokemon/species_info.h):
 ```diff
  const struct SpeciesInfo gSpeciesInfo[] =
  {
@@ -256,7 +256,7 @@ The `.` is the structure reference operator in C to refer to the member object o
         // Dual-group
         .eggGroups = { EGG_GROUP_MONSTER, EGG_GROUP_MINERAL },
         ```
-- `abilities` determines the potential abilites of our species. Notice how I also set the ability to `ABILITY_INSOMNIA`, so our little monster doesn't even need to sleep anymore. You can find the abilities for example here [include/constants/abilities.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/abilities.h).
+- `abilities` determines the potential abilites of our species. Notice how I also set the ability to `ABILITY_INSOMNIA`, so our little monster doesn't even need to sleep anymore. You can find the abilities for example here [include/constants/abilities.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/abilities.h).
     - When both slot 1 and 2 are defined as not being `ABILITY_NONE`, their starting ability will be decided on a coin flip using their personality. They can later be changed using an Ability Capsule.
         - Certain Pokémon such as Zygarde and Rockruff have different forms to add additional abilities. As such, they cannot be changed using an Ability Capsule (though the Zygarde Cube can change Zygarde's ability by changing them to their corresponding form)
     - The 3rd slot is for Hidden Abilities. If defined as `ABILITY_NONE`, it will default to Slot 1 (eg. Metapod doesn't have a Hidden Ability, but Caterpie and Butterfree do). Go [here](https://bulbapedia.bulbagarden.net/wiki/Ability#Hidden_Abilities) and [here](https://bulbapedia.bulbagarden.net/wiki/Ability_Patch) for more info.
@@ -296,7 +296,7 @@ ffmpeg -i sound/direct_sound_samples/cries/mewthree.mp3 -c:a pcm_u8 -ac 1 -ar 13
 ```
 This will convert your audio file to .wav, which is what's read by the compiler.
 
-Let's add the cry to the ROM via [sound/direct_sound_data.inc](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/sound/direct_sound_data.inc).
+Let's add the cry to the ROM via [sound/direct_sound_data.inc](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/sound/direct_sound_data.inc).
 
 ```diff
 .if P_FAMILY_PECHARUNT == TRUE
@@ -311,7 +311,7 @@ Cry_Pecharunt::
 
 ```
 
-Then we add the cry ID to [include/constants/cries.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/cries.h):
+Then we add the cry ID to [include/constants/cries.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/cries.h):
 
 ```diff
 enum PokemonCry
@@ -329,7 +329,7 @@ enum PokemonCry
 };
 ```
 
-And then link it in [sound/cry_tables.inc](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/sound/cry_tables.inc). `cry_reverse` in particular is for reversed cries used by moves such as Growl. The order of these two tables should match the order of the cry IDs, otherwise they'll be shifted.
+And then link it in [sound/cry_tables.inc](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/sound/cry_tables.inc). `cry_reverse` in particular is for reversed cries used by moves such as Growl. The order of these two tables should match the order of the cry IDs, otherwise they'll be shifted.
 
 ```diff
 	cry Cry_Terapagos
@@ -368,7 +368,7 @@ You can now delete the mp3 from the cries folder now once you made sure that the
 
 First, we will need to add new index constants for its Pokédex entry. The index constants are divided into the Hoenn Pokédex, which contains all Pokémon native to the Hoenn region, and the National Pokédex containing all known Pokémon, which can be received after entering the hall of fame for the first time.
 
-Edit [include/constants/pokedex.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/pokedex.h):
+Edit [include/constants/pokedex.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/constants/pokedex.h):
 
 ```diff
 // National Pokedex order
@@ -409,7 +409,7 @@ enum HoennDexOrder
 + #define HOENN_DEX_COUNT (HOENN_DEX_MEWTHREE + 1)
 ```
 
-Edit [src/pokemon.c](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/pokemon.c):
+Edit [src/pokemon.c](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/pokemon.c):
 
 ```diff
  const u16 sHoennToNationalOrder[NUM_SPECIES] = // Assigns Hoenn Dex Pokémon (Using National Dex Index)
@@ -454,7 +454,7 @@ The values `pokemonScale`, `pokemonOffset`, `trainerScale` and `trainerOffset` a
 
 In Pokémon Emerald, you can sort the Pokédex by name, height or weight. Apparently, the Pokémon order is hardcoded in the game files and not calculated from their data. Therefore we have to include our new Pokémon species at the right places. While the correct position for the alphabetical order is easy to find, it can become quite tedious for height and weight, so we added comments to the listings in order help out were they should fit.
 
-Edit [src/data/pokemon/pokedex_orders.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/pokedex_orders.h):
+Edit [src/data/pokemon/pokedex_orders.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/pokemon/pokedex_orders.h):
 
 ```diff
  const u16 gPokedexOrder_Alphabetical[] =
@@ -522,7 +522,7 @@ Open an icon sprite and load one of the palettes to find out which palette suits
 Sadly, just putting the image files into the graphics folder is not enough. To use the sprites we have to register them, which is kind of tedious.
 First, create constants for the file paths. You'll want to add the constants for your species after the constants for the last valid species.
 
-Edit [src/data/graphics/pokemon.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/graphics/pokemon.h):
+Edit [src/data/graphics/pokemon.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/graphics/pokemon.h):
 
 ```diff
 #if P_FAMILY_PECHARUNT
@@ -565,7 +565,7 @@ You can define the animation order, in which the sprites will be shown. The firs
 We add this data directly to the entry, so go to section 4.
 
 ### Version 1.10.3 or earlier
-Edit [src/data/pokemon_graphics/front_pic_anims.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/front_pic_anims.h):
+Edit [src/data/pokemon_graphics/front_pic_anims.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/pokemon_graphics/front_pic_anims.h):
 
 ```diff
 #if P_FAMILY_PECHARUNT
@@ -654,7 +654,7 @@ Let's explain each of these:
         +       .frontAnimFrames = sAnims_Mewthree,
         ```
 - `frontAnimId`:
-    - Because you are limited to two frames, there are already [predefined front sprite animations](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/pokemon_animation.h), describing translations, rotations, scalings or color changes.
+    - Because you are limited to two frames, there are already [predefined front sprite animations](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/pokemon_animation.h), describing translations, rotations, scalings or color changes.
 - `frontAnimDelay`:
     - Sets a delay in frame count between when the Pokémon appears and when the animation starts.
 - `enemyMonElevation`:
@@ -667,7 +667,7 @@ Let's explain each of these:
 - `backPicYOffset`:
     - Used to define what Y position of the back sprite. When working with the animation debug menu, we recommend aligning the back sprite to the white background, as it was designed to properyly align with the real battle layout.
 - `backAnimId`:
-    - Like `frontAnimId` except for the back sprites and them being a single frame. The IDs listed [here](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/pokemon_animation.h) are used to represent 3 different animations that happen based on the the Pokémon's nature.
+    - Like `frontAnimId` except for the back sprites and them being a single frame. The IDs listed [here](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/include/pokemon_animation.h) are used to represent 3 different animations that happen based on the the Pokémon's nature.
 - `palette`:
     - Used to reference the non-shiny palette, so in this case, we call for `gMonPalette_Mewthree`.
 - `shinyPalette`:
@@ -768,7 +768,7 @@ Each species flag provides properties to the species:
 
 Let's begin with the moves that can be learned by leveling up.
 
-Append to [src/data/pokemon/level_up_learnsets/gen_9.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/level_up_learnsets/gen_9.h):
+Append to [src/data/pokemon/level_up_learnsets/gen_9.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/pokemon/level_up_learnsets/gen_9.h):
 **NOTE**: You can ignore the warning at the top of the file if you're just adding moves to Pokemon.
 
 ```diff
@@ -828,10 +828,10 @@ Again, we need to register the learnset in `gSpeciesInfo`:
 
 Next we need to specify which moves can be taught via TM, HM, or Move Tutor.
 
-Those are defined in [src/data/pokemon/teachable_learnsets.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/teachable_learnsets.h). This file is automatically generated by default and you can read the details of how this works in this [doc](tutorials/how_to_trainer_front_pic.md)
+Those are defined in [src/data/pokemon/teachable_learnsets.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/pokemon/teachable_learnsets.h). This file is automatically generated by default and you can read the details of how this works in this [doc](tutorials/how_to_trainer_front_pic.md)
 but let's go through the basics.
 
-If you open [src/data/pokemon/all_learnables.json](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/tall_learnables.json), you will see list of moves associated with every species, the order doesn't matter so let's add Mewthree moves at the top.
+If you open [src/data/pokemon/all_learnables.json](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/pokemon/tall_learnables.json), you will see list of moves associated with every species, the order doesn't matter so let's add Mewthree moves at the top.
 ```diff
 {
 +  "MEWTHREE": [
@@ -845,7 +845,7 @@ If you open [src/data/pokemon/all_learnables.json](https://github.com/SpikeTheDr
 ```
 When compiling, the game will look at the moves and cross-references with the tutor and TM moves available in your game to generate the final list (so you don't need to worry about putting a move there is no way to learn in your game).
 
-While this is not recommended, you can also disable the learnset helper that generates [src/data/pokemon/teachable_learnsets.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/teachable_learnsets.h) and edit the file yourself. First change the config in `include/config/pokemon.h`:
+While this is not recommended, you can also disable the learnset helper that generates [src/data/pokemon/teachable_learnsets.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/pokemon/teachable_learnsets.h) and edit the file yourself. First change the config in `include/config/pokemon.h`:
 ```
 // Learnset helper toggles
 #define P_LEARNSET_HELPER_TEACHABLE TRUE        // If TRUE, teachable_learnsets.h will be populated by tools/learnset_helpers/teachable.py using the included JSON files based on available TMs and tutors.
@@ -886,7 +886,7 @@ Once more, we also need to register the learnset in `gSpeciesInfo`:
  };
 ```
 
-If you want to create a Pokémon which can breed, you will need to edit [src/data/pokemon/egg_moves.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/egg_moves.h).
+If you want to create a Pokémon which can breed, you will need to edit [src/data/pokemon/egg_moves.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/pokemon/egg_moves.h).
 
 
 ## 3. Define the Evolutions
@@ -916,7 +916,7 @@ Edit `gSpeciesInfo`:
 ## 4. Make it appear!
 Now Mewthree really does slumber in the games code - but we won't know until we make him appear somewhere! The legend tells that Mewthree is hiding somewhere in Petalburg Woods...
 
-Edit [src/data/wild_encounters.json](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/wild_encounters.json):
+Edit [src/data/wild_encounters.json](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/wild_encounters.json):
 
 ```diff
          {
@@ -1091,7 +1091,7 @@ If you have `OW_POKEMON_OBJECT_EVENTS` in your hack, you can add Overworld sprit
 
 First, since you copied the contents from Mew's folder previously, you should also have copied its overworld sprites. Edit those to your liking, as we have done before, making sure to update the palettes
 
-Secondly, in [src/data/graphics/pokemon.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/graphics/pokemon.h), add the following:
+Secondly, in [src/data/graphics/pokemon.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/graphics/pokemon.h), add the following:
 
 ```diff
     const u8 gMonIcon_Mewthree[] = INCGFX_U8("graphics/pokemon/mewthree/icon.png", ".4bpp");
@@ -1101,7 +1101,7 @@ Secondly, in [src/data/graphics/pokemon.h](https://github.com/SpikeTheDragon40k/
 +   const u32 gShinyOverworldPalette_Mewthree[] = INCGFX_U32("graphics/pokemon/mewthree/overworld_shiny.pal", ".gbapal");
 ```
 
-Thirdly, in [src/data/object_events/object_event_pic_tables_followers.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/object_events/object_event_pic_tables_followers.h):
+Thirdly, in [src/data/object_events/object_event_pic_tables_followers.h](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/object_events/object_event_pic_tables_followers.h):
 ```diff
 #if P_FAMILY_PECHARUNT
 /*static const struct SpriteFrameImage sPicTable_Pecharunt[] = {

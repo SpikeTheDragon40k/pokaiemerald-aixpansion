@@ -2,7 +2,7 @@
 Install instructions for each supported operating system can be found in their respective directories under `docs/install/`.
 Lines to those can be found under each heading.
 This file only contains a short introduction to each supported system.
-If you run into trouble, open an [issue](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
+If you run into trouble, open an [issue](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/issues).
 
 After completing the install instructions for your OS, proceed to [Building pokeemerald-expansion](#building-pokeemerald-expansion).
 
@@ -52,12 +52,12 @@ Follow these steps to build `pokeemerald-expansion`.
 2. Download `pokeemerald-expansion` with `git`
 
     ```console
-    git clone https://github.com/SpikeTheDragon40k/porkeemerald-explansion
+    git clone https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion
     ```
 3. Navigate to the newly downloaded project.
 
     ```console
-    cd porkeemerald-explansion
+    cd pokaiemerald-aixpansion
     ```
 4. Build the project.
 
@@ -123,7 +123,7 @@ This project has a single branch, `master`, which always has the latest function
 
 1. Set this project as a git remote
 ```console
-git remote add fork https://github.com/SpikeTheDragon40k/porkeemerald-explansion
+git remote add fork https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion
 ```
 
 2. Pull `master`
@@ -136,7 +136,7 @@ If you are not on the latest version of pret's pokeemerald, you should expect so
 # Updating
 
 ```console
-git remote add fork https://github.com/SpikeTheDragon40k/porkeemerald-explansion # only needed once
+git remote add fork https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion # only needed once
 git pull fork master
 ```
 

@@ -1,6 +1,6 @@
 <!--- Provide a descriptive title that describes what was changed in this PR. --->
 
-<!--- CONTRIBUTING.md : https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/CONTRIBUTING.md --->
+<!--- CONTRIBUTING.md : https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/CONTRIBUTING.md --->
 
 <!--- Before submitting, ensure the following:--->
 
