@@ -4,7 +4,7 @@ Lines to those can be found under each heading.
 This file only contains a short introduction to each supported system.
 If you run into trouble, open an [issue](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/issues).
 
-After completing the install instructions for your OS, proceed to [Building pokeemerald-expansion](#building-pokeemerald-expansion).
+After completing the install instructions for your OS, proceed to [Building pokaiemerald-aixpansion](#building-pokaiemerald-aixpansion).
 
 ## Windows
 **Windows needs one of the systems to build the project**
@@ -46,10 +46,10 @@ Only tested on x86_64 based systems.
 
 [Chrome OS instructions](docs/install/chromeos/CHROME_OS.md)
 
-# Building pokeemerald-expansion
-Follow these steps to build `pokeemerald-expansion`.
+# Building pokaiemerald-aixpansion
+Follow these steps to build `pokaiemerald-aixpansion`.
 1. Navigate to the directory you want to keep the project in, be aware of any system specific limitations.
-2. Download `pokeemerald-expansion` with `git`
+2. Download `pokaiemerald-aixpansion` with `git`
 
     ```console
     git clone https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion

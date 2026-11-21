@@ -2,7 +2,7 @@
 
 ## What are migration scripts?
 
-pokeemerald-expansion rewrites existing systems in pokeemerald to improve their efficiency and make them easier to use and implement for developers. If developers were previously using a system that has been deprecated, it can be difficult to manually migrate between systems.
+pokaiemerald-aixpansion rewrites existing systems in pokeemerald to improve their efficiency and make them easier to use and implement for developers. If developers were previously using a system that has been deprecated, it can be difficult to manually migrate between systems.
 
 These scripts exist to help developers make the transition between refactored systems.
 

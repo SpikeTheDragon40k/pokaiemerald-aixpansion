@@ -38,4 +38,4 @@
     source /etc/profile.d/devkit-env.sh
     ```
 
-Proceed to [Choosing where to store pokeemerald (WSL1) of the current INSTALL.md](/INSTALL.md#choosing-where-to-store-pokeemerald-expansion-WSL1).
+Proceed to [Choosing a location to store pokaiemerald-aixpansion, WSL1](install/windows/WSL.md#choosing-a-location-to-store-pokaiemerald-aixpansion-wsl1).

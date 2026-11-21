@@ -24,7 +24,7 @@ AI: Check Bad Move / Try to Faint / Check Viability. The name of each flag is ju
 If you are not using competitive syntax parties, instead access the trainer data directly in [`src/data/trainers.h`](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/blob/master/src/data/trainers.h), and add flags like so, typed exactly the same as the flag names themselves:
 `.aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY`
 
-# What AI Flags does pokeemerald-expansion have?
+# What AI Flags does pokaiemerald-aixpansion have?
 This section lists all of expansion’s AI Flags and briefly describes the effect they have on the AI’s behaviour. In all cases, please check the corresponding function or surrounding code around their implementation for more details. Some of these functions are vanilla, some share a name with vanilla but have been modified to varying degrees, and some are completely new.
 
 ## Composite AI Flags

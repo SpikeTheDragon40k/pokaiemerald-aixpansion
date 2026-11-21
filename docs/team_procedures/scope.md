@@ -1,12 +1,12 @@
 # Document Purpose
 
-This document is a guide for contributors and Senate to decide if a feature is within "scope" for pokeemerald-expansion. "Scope" in this case comprises a list of features and concepts that could be merged if an appropriate implementation is submitted. If a feature is not in scope, then it should not be merged. 
+This document is a guide for contributors and Senate to decide if a feature is within "scope" for pokaiemerald-aixpansion. "Scope" in this case comprises a list of features and concepts that could be merged if an appropriate implementation is submitted. If a feature is not in scope, then it should not be merged. 
 
 ⚠️ Even if an opened PR is within scope, this does not mean it will be merged, as pull requests will need to pass the pass the [merge checklist](merge_checklist.md), which includes our  [config phiilosophy](../STYLEGUIDE.md#config-philosophy), [saves philosophy](../STYLEGUIDE.md#save-philosophy), and [styleguide](../STYLEGUIDE.md).
 
 # Definitions
 ## Base Expansion Version
-A .gba file built from an unmodified `master` or `upcoming` branch of `pokeemerald-expansion`.
+A .gba file built from an unmodified `master` branch of `pokaiemerald-aixpansion`.
 
 ## Vanilla Emerald Version
 A .gba file built from an unmodified `master` branch of pret's `pokeemerald`.

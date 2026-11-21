@@ -11,4 +11,4 @@
     ```console
     sudo apt install build-essential binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi git libpng-dev python3
     ```
-**NOTE**: The project must be kept in a directory inside the Linux filesystem, for example under `~/Decomps/pokeemerald-expansion`
+**NOTE**: The project must be kept in a directory inside the Linux filesystem, for example under `~/Decomps/pokaiemerald-aixpansion`
