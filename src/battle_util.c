@@ -998,19 +998,29 @@ void HandleAction_TryFinish(void)
     }
 }
 
+// Once every battler has acted, gCurrentTurnActionNumber == gBattlersCount, which can be past the
+// end of gActionsByTurnOrder / gBattlerByTurnOrder. Don't read those slots.
+static inline u32 GetActionAtTurnOrder(u32 turnActionNumber)
+{
+    if (turnActionNumber >= gBattlersCount)
+        return B_ACTION_USE_MOVE;
+    return gActionsByTurnOrder[turnActionNumber];
+}
+
 void HandleAction_NothingIsFainted(void)
 {
     gCurrentTurnActionNumber++;
-    gCurrentActionFuncId = gActionsByTurnOrder[gCurrentTurnActionNumber];
+    gCurrentActionFuncId = GetActionAtTurnOrder(gCurrentTurnActionNumber);
 }
 
 void HandleAction_ActionFinished(void)
 {
     u32 i, j;
-    bool32 afterYouActive = gSpecialStatuses[gBattlerByTurnOrder[gCurrentTurnActionNumber + 1]].afterYou;
+    bool32 afterYouActive = gCurrentTurnActionNumber + 1 < gBattlersCount
+                         && gSpecialStatuses[gBattlerByTurnOrder[gCurrentTurnActionNumber + 1]].afterYou;
     gBattleStruct->monToSwitchIntoId[gBattlerByTurnOrder[gCurrentTurnActionNumber]] = gSelectedMonPartyId = PARTY_SIZE;
     gCurrentTurnActionNumber++;
-    gCurrentActionFuncId = gActionsByTurnOrder[gCurrentTurnActionNumber];
+    gCurrentActionFuncId = GetActionAtTurnOrder(gCurrentTurnActionNumber);
     memset(&gSpecialStatuses, 0, sizeof(gSpecialStatuses));
 
     gCurrentMove = MOVE_NONE;
@@ -8143,6 +8153,10 @@ s32 CalculateMoveDamage(struct DamageContext *ctx)
         damage = DoFutureSightAttackDamageCalc(ctx);
     else
         damage = DoMoveDamageCalc(ctx);
+
+    // Damage is stored in s16 fields (e.g. moveDamage), so clamp it to avoid wrapping around to
+    // a negative value, which would heal the target. No battler has anywhere near this much HP.
+    damage = min(damage, INT16_MAX);
 
     return GetAdjustedDamage(ctx, damage);
 }

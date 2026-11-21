@@ -777,7 +777,7 @@ AI_DOUBLE_BATTLE_TEST("Trainer Slide: Doubles: Opponent Last Low Hp")
         PLAYER(SPECIES_WOBBUFFET) { Defense(1); Speed(4); }
         PLAYER(SPECIES_WOBBUFFET) { Defense(1); Speed(3); Moves(MOVE_MEMENTO); }
         OPPONENT(SPECIES_WOBBUFFET) { Attack(999); Speed(2); }
-        OPPONENT(SPECIES_WOBBUFFET) { Attack(999); Speed(1); }
+        OPPONENT(SPECIES_WOBBUFFET) { Attack(999); Speed(1); Moves(MOVE_CELEBRATE); }
     } WHEN {
         TURN {
             MOVE(playerRight, MOVE_MEMENTO, target: playerLeft);
