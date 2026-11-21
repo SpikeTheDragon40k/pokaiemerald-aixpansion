@@ -2,7 +2,7 @@
 Install instructions for each supported operating system can be found in their respective directories under `docs/install/`.
 Lines to those can be found under each heading.
 This file only contains a short introduction to each supported system.
-If you run into trouble, ask for help on Discord (see [README.md](README.md)).
+If you run into trouble, open an [issue](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
 
 After completing the install instructions for your OS, proceed to [Building pokeemerald-expansion](#building-pokeemerald-expansion).
 
@@ -52,12 +52,12 @@ Follow these steps to build `pokeemerald-expansion`.
 2. Download `pokeemerald-expansion` with `git`
 
     ```console
-    git clone https://github.com/rh-hideout/pokeemerald-expansion
+    git clone https://github.com/SpikeTheDragon40k/porkeemerald-explansion
     ```
 3. Navigate to the newly downloaded project.
 
     ```console
-    cd pokeemerald-expansion
+    cd porkeemerald-explansion
     ```
 4. Build the project.
 
@@ -117,65 +117,30 @@ make debug
 ```
 
 # Choosing a branch
-**pokeemerald-expansion** has different branches that users can decide to use.
-
-## Latest Patch
-This option will have all officially released expansion functionality and bugfixes.
-
-## `master`
-The `master` branch has all of the functionality from "Latest Patch", as well as any bugfixes that have been discovered since that release.
-
-## `upcoming`
-The `master` branch has all of the functionality from "Latest Patch", as well as any functionality that has been added since that release.
-
-The bugfixes on `master` are occasionally merged into `upcoming`, but there is no official cadence.
+This project has a single branch, `master`, which always has the latest functionality and bugfixes.
 
 # Migrating from pokeemerald
 
-1. Set RHH as a git remote
+1. Set this project as a git remote
 ```console
-git remote add RHH https://github.com/rh-hideout/pokeemerald-expansion
+git remote add fork https://github.com/SpikeTheDragon40k/porkeemerald-explansion
 ```
 
-2. Pull your desired branch
-There are three different options to pull from.
+2. Pull `master`
 ```console
-git pull RHH master # if you've chosen to use the upcoming branch, replace the word master with upcoming.
-# If you've chosen the latest patch, replace the word master with expansion
-# If you've chosen Latest Patch, replace the word master with expansion/1.11.0 where 1.11.0 is replaced with whatever the latest released version is.
+git pull fork master
 ```
 
-If you are not on the latest version of pret's pokeemerald, you should expect some merge conflicts that you'll need to resolve. Once complete, you'll be using **pokeemerald-expansion**.
+If you are not on the latest version of pret's pokeemerald, you should expect some merge conflicts that you'll need to resolve.
 
-# Updating pokeemerald-expansion
+# Updating
 
-1. Set RHH as a git remote
 ```console
-git remote add RHH https://github.com/rh-hideout/pokeemerald-expansion
+git remote add fork https://github.com/SpikeTheDragon40k/porkeemerald-explansion # only needed once
+git pull fork master
 ```
 
-2. Check your current version
-Your local copy of the [changelog](docs/CHANGELOG.md) will be updated with the version your repo is on.
-
-3. Select a target version
-We recommend incrementally updating to the next version using the following order below.
-If you are on a version older than 1.6.2, you should target 1.6.2..
-    * 1.6.2
-    * 1.7.4
-    * 1.8.3
-    * 1.9.4
-    * 1.10.3
-
-For example, if your version is 1.7.0, you should update to 1.7.4.
-
-4. Pull the target version
-```console
-git pull RHH expansion/X.Y.Z # Replace X, Y and Z with the target version, such as `1.9.3`, `master`, or `upcoming`.
-```
-
-You may have merge conflicts that you need to resolve.
-
-If you targeted a specific version that is not the latest version listed on the [tags](https://github.com/rh-hideout/pokeemerald-expansion/tags) page, you should repeat steps 3 and 4 until you are.
+You may have merge conflicts that you need to resolve. Check [`docs/CHANGELOG.md`](docs/CHANGELOG.md) for what changed.
 
 # Useful additional tools
 

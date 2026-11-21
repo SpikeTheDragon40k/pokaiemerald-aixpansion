@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> **This is an independent fork of [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion) that welcomes AI-assisted (LLM) contributions.** It is not affiliated with or endorsed by RHH. Upstream bans LLM-assisted work, so do not send AI-assisted issues or PRs there or ask about this fork in their Discord. Contribute here instead: read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`AGENTS.md`](AGENTS.md). All credit for the base project goes to RHH and its [contributors](CREDITS.md).
+> **This is an independent project that welcomes AI-assisted (LLM) contributions.** It began as a fork of RHH's `pokeemerald-expansion` 1.17.2 and no longer syncs with it. It is not affiliated with or endorsed by RHH, so please don't ask about it in their spaces. To contribute, read [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`AGENTS.md`](AGENTS.md). Credit for the original base goes to RHH and its [contributors](CREDITS.md).
 
 # About `pokeemerald-expansion`
 
@@ -15,12 +15,12 @@
 
 # [Credits](CREDITS.md)
 
- [![](https://img.shields.io/github/all-contributors/rh-hideout/pokeemerald-expansion/upcoming)](CREDITS.md)
+ [![](https://img.shields.io/github/all-contributors/SpikeTheDragon40k/porkeemerald-explansion/master)](CREDITS.md)
 
-If you use **`pokeemerald-expansion`**, please credit **RHH (Rom Hacking Hideout)**. Optionally, include the version number for clarity.
+If you use this project, please credit it and **RHH (Rom Hacking Hideout)**, whose `pokeemerald-expansion` it is based on.
 
 ```
-Based off RHH's pokeemerald-expansion 1.17.2 https://github.com/rh-hideout/pokeemerald-expansion/
+Based off https://github.com/SpikeTheDragon40k/porkeemerald-explansion, which is based off RHH's pokeemerald-expansion 1.17.2
 ```
 
 Please consider [crediting all contributors](CREDITS.md) involved in the project!
@@ -42,15 +42,13 @@ If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Paw
 ## 🚚 [Migrating from **`pokeemerald`**](INSTALL.md#Migrating-from-pokeemerald)
 ## 🚀 [Updating **`pokeemerald-expansion`**](INSTALL.md#Updating-pokeemerald-expansion)
 
-# [Documentation](https://rh-hideout.github.io/pokeemerald-expansion/)
+# [Documentation](https://spikethedragon40k.github.io/porkeemerald-explansion/)
 
-For detailed documentation, visit the [pokeemerald-expansion documentation page](https://rh-hideout.github.io/pokeemerald-expansion/).
+For detailed documentation, visit the [documentation page](https://spikethedragon40k.github.io/porkeemerald-explansion/) (built from [`docs/`](docs/) once GitHub Pages is enabled).
 
 # [Contributions](CONTRIBUTING.md)
 If you are looking to [report a bug](CONTRIBUTING.md#Bug-Report), [open a pull request](CONTRIBUTING.md#Pull-Requests), or [request a feature](CONTRIBUTING.md#Feature-Request), our [`CONTRIBUTING.md`](CONTRIBUTING.md) has guides for each. AI-assisted contributions are welcome in this fork, provided they build, pass the test suite and are disclosed; see the [AI-assisted contributions policy](CONTRIBUTING.md#ai-assisted-contributions-policy).
 
-# [Community](https://discord.gg/6CzjAG6GZk)
+# [Community](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues)
 
-[![](https://dcbadge.limes.pink/api/server/6CzjAG6GZk)](https://discord.gg/6CzjAG6GZk)
-
-Our community uses the [ROM Hacking Hideout (RHH) Discord server](https://discord.gg/6CzjAG6GZk) to communicate and organize. Most of our discussions take place there, and we welcome anybody to join us!
+Discussion happens in this repository's [GitHub issues](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues). Everybody is welcome!

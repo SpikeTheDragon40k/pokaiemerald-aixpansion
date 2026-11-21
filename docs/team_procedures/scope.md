@@ -112,7 +112,7 @@ Addresses limitations and issues resulting from including all generational behav
 
 ## Workflow for Proposed Feature Scope Discussion
 ### Contributors
-1. Make a thread for the feature on Discord
+1. Open an issue for the feature on GitHub
 1. Describe how the feature fits into this scope document, and why you feel it should be considered
 1. Optionally include either a draft PR or describe in some detail the proposed implementation. 
     - Non-mandatory, but implementation invasiveness, maintenance cost, etc. are major considerations, so use your judgement. Maintainers may ask for this information during discussion.

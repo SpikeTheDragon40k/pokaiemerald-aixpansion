@@ -6,7 +6,7 @@ All contributions are encouraged and valued. Please make sure to read the releva
 
 ## AI-Assisted Contributions Policy
 
-This is an **independent fork** of [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion). Unlike upstream, **this fork welcomes contributions written with help from large language models (LLMs)**, such as Claude, ChatGPT, Copilot or local models. Use these tools to build features that would take much longer to write by hand.
+This is an **independent project** that started as a fork of RHH's `pokeemerald-expansion` and no longer syncs with it. **This project welcomes contributions written with help from large language models (LLMs)**, such as Claude, ChatGPT, Copilot or local models. Use these tools to build features that would take much longer to write by hand.
 
 AI does not lower the bar. Every PR, however it was written, must meet the same rules:
 
@@ -20,28 +20,28 @@ AI does not lower the bar. Every PR, however it was written, must meet the same 
 
 LLM-generated assets (graphics, music) are accepted only if you have the right to use them and you say so in the PR.
 
-> ⚠️ **Do not send AI-assisted work upstream.** `rh-hideout/pokeemerald-expansion` bans LLM-assisted contributions and repeat violators. Please respect their rules: open AI-assisted PRs here, against this fork.
+> ⚠️ Open AI-assisted PRs **here**. The original RHH project does not accept LLM-assisted contributions.
 
 Agents and their users should read [`AGENTS.md`](AGENTS.md) first: it explains how to build, test and navigate this codebase.
 
 ## Bug Reports
 
-We use [GitHub](https://github.com/rh-hideout/pokeemerald-expansion/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen+label%3Abug) issues to track bugs.
+We use [GitHub](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen+label%3Abug) issues to track bugs.
 
 ### What should I do before making a bug report?
 
-- Does your bug occur on the latest unmodified (clean) version of the [`upcoming`](https://github.com/rh-hideout/pokeemerald-expansion/tree/upcoming) or [`master`](https://github.com/rh-hideout/pokeemerald-expansion/tree/master) branch? If not, please do not submit a report - the issue is most likely one introduced by your game.
-- Has somebody else already found this issue? This is best done by searching the [bug tracker](https://github.com/rh-hideout/pokeemerald-expansion/issues?q=label%3Abug) to see if anybody else reported it. If there is already an issue, replying to the exsting issue with more information can help solve the problem.
+- Does your bug occur on the latest unmodified (clean) version of the [`master`](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/tree/master) branch? If not, please do not submit a report - the issue is most likely one introduced by your game.
+- Has somebody else already found this issue? This is best done by searching the [bug tracker](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues?q=label%3Abug) to see if anybody else reported it. If there is already an issue, replying to the exsting issue with more information can help solve the problem.
 
 ### How do I submit a bug report?
 
-If you run into an issue with the project, open an [issue](https://github.com/rh-hideout/pokeemerald-expansion/issues/new).
+If you run into an issue with the project, open an [issue](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues/new).
 
 The best bug reports have enough information that we won't have to contact you for more information. We welcome all efforts to improve pokeemerald-expansion, but would be very grateful if you completed as much of the checklist as possible in your bug report. This will help other contributiors fix your issue.
 
 ### What happens after I submit a bug report?
 
-- A maintainer will [label](https://github.com/rh-hideout/pokeemerald-expansion/labels) the bug report.
+- A maintainer will [label](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/labels) the bug report.
 - A maintainer will try to reproduce the bug with your provided steps.
     - If there are no reproduction steps or no obvious way to reproduce the issue, somebody will ask you for those steps. Until the bug can be reproduced, the bug will retain the `bug:unconfirmed` label. Unconfirmed bugs are less likely to get fixed.
 - If the team is able to reproduce the bug, it will be labeled `bug:confirmed`, and the bug will be left to be [fixed by someone](#Pull-Requests).
@@ -51,42 +51,37 @@ The best bug reports have enough information that we won't have to contact you f
 
 This section guides you through submitting a feature request for pokeemerald-expansion, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
 
-- We use [GitHub](https://github.com/rh-hideout/pokeemerald-expansion/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen+label%3Afeature-request) issues to track feature requests.
+- We use [GitHub](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen+label%3Afeature-request) issues to track feature requests.
 
 ### What should I do before making a feature request?
 
-- Make sure your request is in [pokeemerald-expansion's scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue on this fork](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
+- Make sure your request is in [pokeemerald-expansion's scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
 
 ### What should I do before making a feature request?
 
-- Read the [documentation](https://rh-hideout.github.io/pokeemerald-expansion/) to find out if the functionality is already covered, maybe by an individual configuration.
-- Perform a [search](https://github.com/rh-hideout/pokeemerald-expansion/issues) to see if the feature has already been requested. If it has, add a comment to the existing issue instead of opening a new one.
+- Read the [documentation](docs/) to find out if the functionality is already covered, maybe by an individual configuration.
+- Perform a [search](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues) to see if the feature has already been requested. If it has, add a comment to the existing issue instead of opening a new one.
 
 ### How do I submit a feature request?
 
-To request a feature to be added to the project, open a [feature request](https://github.com/rh-hideout/pokeemerald-expansion/issues/new).
+To request a feature to be added to the project, open a [feature request](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues/new).
 
 ### What happens after I submit a feature request?
 
-- A maintainer will [label](https://github.com/rh-hideout/pokeemerald-expansion/labels) the issue.
+- A maintainer will [label](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/labels) the issue.
 - If the feature request is out of [scope](docs/team_procedures/scope.md), it will be closed.
 - if the request is in scope, any other contributor can volunteer to [fufill it via a pull request](#Pull-Requests). When the request is filled, the request will be closed.
 
 ## Pull Requests
 
-If you have read all of this and still need help, feel free to open an [issue on this fork](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues). Please do not ask about this fork in the RHH Discord server.
+If you have read all of this and still need help, feel free to open an [issue](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
 
 ### What should I do before starting a pull request?
 
 - If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/) has a [guide on forking and cloning the repository](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/The-Basics-of-GitHub). Make sure you have a [local copy](INSTALL.md) of `pokeemerald-expansion`.
-- Make sure your contribution is in [scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue on this fork](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
-- Choose a branch to contribute your PR to:
-    - **`master`**: If your PR contains meets any of the following criteria, it should go to `master`:
-      - Fixes for bugs that are currently present in the `master` branch
-      - PR is only documentation updates / changes
-      - PR is only tests
-    - **`upcoming`**: All other pull requests go to `upcoming`.
-- Create a new branch from the most recent version of the branch you've chosen.
+- Make sure your contribution is in [scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/issues).
+- All pull requests target `master`.
+- Create a new branch from the most recent `master`.
 - If your contribution introduces, removes, or changes a lot of existing code, we reccomend getting a maintainer to agree to review it before you start on the work! We have a table that lists all [current maintainers and their areas of expertise](#maintainers).
 
 ### How do I submit a pull request?
@@ -95,7 +90,7 @@ If you have read all of this and still need help, feel free to open an [issue on
 If you haven't already, follow [INSTALL.md](INSTALL.md) to get a working local copy of `pokeemerald-expansion`.
 
 #### 2. Set this fork as a remote
-This will designate this fork as a remote. (Upstream RHH can also be added to read their history, but AI-assisted PRs must not be opened there.)
+This will designate this repository as a remote.
 ```bash
 git remote add fork https://github.com/SpikeTheDragon40k/porkeemerald-explansion # You can replace fork with anything you want.
 ```
@@ -106,10 +101,10 @@ This will create a new branch and switch to it.
 git switch -c newFeature # the name newFeature can be anything you want. This tutorial assumes you used newFeature.
 ```
 
-#### 4. Copy your target branch to your new branch
-This will change your new branch to match the latest version of your chosen target branch.
+#### 4. Start from the latest master
+This will change your new branch to match the latest `master`.
 ```bash
-git reset --hard upcoming # If your PR is going to target master, replace upcoming with master.
+git fetch fork && git reset --hard fork/master
 ```
 
 #### 5. Implement your code
@@ -117,7 +112,7 @@ All of your work should go on this new, clean branch. If you already started wor
 
 ##### Popular Features / Feature Branches
 
-If you are implementing functionality from a known community feature branch, it is **strongly** recommended that you open a discussion thread _before_ starting. There are some situations where maintainers would ask you to use the existing feature branch as a base, and others where maintainers would want a feature to be written from scratch.
+If you are implementing functionality from a known community feature branch, it is **strongly** recommended that you open an issue _before_ starting. There are some situations where maintainers would ask you to use the existing feature branch as a base, and others where maintainers would want a feature to be written from scratch.
 
 This changes on a case by case basis.
 
@@ -128,7 +123,7 @@ git push --set-upstream origin newFeature
 ```
 
 #### 7. Open Pull Request
-Once your work is complete and pushed to the branch on Github, you can open a [pull request from your branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork), targeting the branch you've chosen in **this fork** (not upstream RHH). Please fill out the pull request description as completely as possible.
+Once your work is complete and pushed to the branch on Github, you can open a [pull request from your branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork), targeting `master` in this repository. Please fill out the pull request description as completely as possible.
 
 ### What happens after I submit a pull request?
 
@@ -145,7 +140,7 @@ Once all items on the merge checklist are true, the branch will be merged in.
 
 ## Maintainers
 
-This fork is maintained by [SpikeTheDragon40k](https://github.com/SpikeTheDragon40k). The people who maintain upstream `pokeemerald-expansion` are listed in [upstream's CONTRIBUTING.md](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/CONTRIBUTING.md#maintainers); they are not involved in this fork, so please do not contact them about it.
+This project is maintained by [SpikeTheDragon40k](https://github.com/SpikeTheDragon40k). The maintainers of RHH's `pokeemerald-expansion` are not involved in this project, so please do not contact them about it.
 
 ## Attribution
 This guide is based on the [contributing.md](https://contributing.md/generator)!

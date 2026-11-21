@@ -50,7 +50,7 @@ Finally, edit `icon.png`. Notice, that the icon will use one of three predefined
 ## 2. Register the sprites
 Sadly, just putting the image files into the graphics folder is not enough. To use the sprites we have to register them, which is kind of tedious.
 First, create constants for the file paths. You'll want to add the constants for your species after the constants for the last valid species.
-Edit [include/graphics.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/include/graphics.h):
+Edit [include/graphics.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/graphics.h):
 
 ```diff
  extern const u32 gMonFrontPic_Calyrex[];
@@ -84,7 +84,7 @@ Edit [include/graphics.h](https://github.com/rh-hideout/pokeemerald-expansion/bl
 
 Now link the graphic files.
 
-Edit [src/data/graphics/pokemon.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/graphics/pokemon.h):
+Edit [src/data/graphics/pokemon.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/graphics/pokemon.h):
 
 ```diff
  const u32 gMonFrontPic_Calyrex[] = INCBIN_U32("graphics/pokemon/calyrex/front.4bpp.lz");
@@ -124,7 +124,7 @@ It is also worth to mention that Calyrex's icon sprite is commented out simply b
 
 You can define the animation order, in which the sprites will be shown. The first number is the sprite index (so 0 or 1) and the second number is the number of frames the sprite will be visible.
 
-Edit [src/data/pokemon_graphics/front_pic_anims.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/front_pic_anims.h):
+Edit [src/data/pokemon_graphics/front_pic_anims.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/front_pic_anims.h):
 
 ```diff
 static const union AnimCmd sAnim_Enamorus_1[] =
@@ -163,7 +163,7 @@ SINGLE_ANIMATION(Enamorus);
 
 Because you are limited to two frames, there are already [predefined front sprite animations](#available-front-animations), describing translations, rotations, scalings or color changes.
 
-Edit [src/pokemon.c](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/pokemon.c):
+Edit [src/pokemon.c](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/pokemon.c):
 ```diff
  static const u8 sMonFrontAnimIdsTable[] =
  {
@@ -176,7 +176,7 @@ Edit [src/pokemon.c](https://github.com/rh-hideout/pokeemerald-expansion/blob/ma
 
 There are also [predefined back sprite animations](#available-back-animations) for the back sprites as well.
 
-Edit [src/pokemon_animation.c](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/pokemon_animation.c):
+Edit [src/pokemon_animation.c](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/pokemon_animation.c):
 
 ```diff
  static const u8 sSpeciesToBackAnimSet[] =
@@ -190,7 +190,7 @@ Edit [src/pokemon_animation.c](https://github.com/rh-hideout/pokeemerald-expansi
 
 If you want to delay the time between when the Pokémon appears and when the animation starts, you can add an entry to `sMonAnimationDelayTable`
 
-Edit [src/pokemon.c](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/pokemon.c):
+Edit [src/pokemon.c](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/pokemon.c):
 
 ```diff
  static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =
@@ -205,7 +205,7 @@ Edit [src/pokemon.c](https://github.com/rh-hideout/pokeemerald-expansion/blob/ma
 
 If you want your Pokémon to fly above the ground, you can add an entry to `gEnemyMonElevation`.
 
-Edit [src/data/pokemon_graphics/enemy_mon_elevation.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/enemy_mon_elevation.h):
+Edit [src/data/pokemon_graphics/enemy_mon_elevation.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/enemy_mon_elevation.h):
 
 ```diff
  const u8 gEnemyMonElevation[NUM_SPECIES] =
@@ -219,7 +219,7 @@ Edit [src/data/pokemon_graphics/enemy_mon_elevation.h](https://github.com/rh-hid
 
 ## 4. Update the tables
 
-Edit [src/data/pokemon_graphics/front_pic_table.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/front_pic_table.h):
+Edit [src/data/pokemon_graphics/front_pic_table.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/front_pic_table.h):
 
 ```diff
  const struct CompressedSpriteSheet gMonFrontPicTable[] =
@@ -234,7 +234,7 @@ Edit [src/data/pokemon_graphics/front_pic_table.h](https://github.com/rh-hideout
 };
 ```
 
-Edit [src/data/pokemon_graphics/front_pic_coordinates.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/front_pic_coordinates.h):
+Edit [src/data/pokemon_graphics/front_pic_coordinates.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/front_pic_coordinates.h):
 
 ```diff
  const struct MonCoords gMonFrontPicCoords[] =
@@ -247,7 +247,7 @@ Edit [src/data/pokemon_graphics/front_pic_coordinates.h](https://github.com/rh-h
  };
 ```
 
-Edit [src/data/pokemon_graphics/back_pic_table.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/back_pic_table.h):
+Edit [src/data/pokemon_graphics/back_pic_table.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/back_pic_table.h):
 
 ```diff
  const struct CompressedSpriteSheet gMonBackPicTable[] =
@@ -262,7 +262,7 @@ Edit [src/data/pokemon_graphics/back_pic_table.h](https://github.com/rh-hideout/
  };
 ```
 
-Edit [src/data/pokemon_graphics/back_pic_coordinates.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/back_pic_coordinates.h):
+Edit [src/data/pokemon_graphics/back_pic_coordinates.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/back_pic_coordinates.h):
 
 ```diff
  const struct MonCoords gMonBackPicCoords[] =
@@ -275,7 +275,7 @@ Edit [src/data/pokemon_graphics/back_pic_coordinates.h](https://github.com/rh-hi
  };
 ```
 
-Edit [src/data/pokemon_graphics/footprint_table.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/footprint_table.h):
+Edit [src/data/pokemon_graphics/footprint_table.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/footprint_table.h):
 
 ```diff
  const u8 *const gMonFootprintTable[] =
@@ -290,7 +290,7 @@ Edit [src/data/pokemon_graphics/footprint_table.h](https://github.com/rh-hideout
  };
 ```
 
-Edit [src/data/pokemon_graphics/palette_table.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/palette_table.h):
+Edit [src/data/pokemon_graphics/palette_table.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/palette_table.h):
 
 ```diff
  const struct CompressedSpritePalette gMonPaletteTable[] =
@@ -305,7 +305,7 @@ Edit [src/data/pokemon_graphics/palette_table.h](https://github.com/rh-hideout/p
 };
 ```
 
-Edit [src/data/pokemon_graphics/shiny_palette_table.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon_graphics/shiny_palette_table.h):
+Edit [src/data/pokemon_graphics/shiny_palette_table.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon_graphics/shiny_palette_table.h):
 
 ```diff
 const struct CompressedSpritePalette gMonShinyPaletteTable[] =
@@ -320,7 +320,7 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
 };
 ```
 
-Edit [src/pokemon_icon.c](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/pokemon_icon.c):
+Edit [src/pokemon_icon.c](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/pokemon_icon.c):
 
 ```diff
  const u8 *const gMonIconTable[] =
@@ -358,7 +358,7 @@ Our plan is as simple as it is brilliant: clone Mewtwo... and make it even stron
 
 Our first step towards creating a new digital lifeform is to define its own species constant.
 
-Edit [include/constants/species.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/include/constants/species.h):
+Edit [include/constants/species.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/species.h):
 
 ```diff
  #define SPECIES_NONE 0
@@ -376,7 +376,7 @@ Edit [include/constants/species.h](https://github.com/rh-hideout/pokeemerald-exp
 
 This name will be displayed in the game. It may be different than the identifier of the species constant, especially when there are special characters involved.
 
-Edit [src/data/text/species_names.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/text/species_names.h):
+Edit [src/data/text/species_names.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/text/species_names.h):
 
 ```diff
  const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
@@ -394,7 +394,7 @@ The `_()` underscore function doesn't really exist - it's a convention borrowed 
 
 First, we will need to add new index constants for its Pokédex entry. The index constants are divided into the Hoenn Pokédex, which contains all Pokémon native to the Hoenn region, and the National Pokédex containing all known Pokémon, which can be received after entering the hall of fame for the first time.
 
-Edit [include/constants/pokedex.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/include/constants/pokedex.h):
+Edit [include/constants/pokedex.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/pokedex.h):
 
 ```diff
 // National Pokedex order
@@ -435,7 +435,7 @@ enum {
 + #define HOENN_DEX_COUNT (HOENN_DEX_MEWTHREE + 1)
 ```
 
-Edit [src/pokemon.c](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/pokemon.c):
+Edit [src/pokemon.c](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/pokemon.c):
 
 
 ```diff
@@ -472,7 +472,7 @@ Just like before, if we want to insert our new species in the Hoenn Dex, we'll h
 
 Now we can define the actual text of the Pokédex entry.
 
-Append to [src/data/pokemon/pokedex_text.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/pokedex_text.h):
+Append to [src/data/pokemon/pokedex_text.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/pokedex_text.h):
 
 ```diff
  const u8 gEnamorusPokedexText[] = _(
@@ -490,7 +490,7 @@ Append to [src/data/pokemon/pokedex_text.h](https://github.com/rh-hideout/pokeem
 
 Finally, we will add the Pokédex entry for Mewthree and link the text to it.
 
-Edit [src/data/pokemon/pokedex_entries.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/pokedex_entries.h):
+Edit [src/data/pokemon/pokedex_entries.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/pokedex_entries.h):
 
 ```diff
  const struct PokedexEntry gPokedexEntries[] =
@@ -527,7 +527,7 @@ The values `pokemonScale`, `pokemonOffset`, `trainerScale` and `trainerOffset` a
 
 In Pokémon Emerald, you can sort the Pokédex by name, height or weight. Apparently, the Pokémon order is hardcoded in the game files and not calculated from their data. Therefore we have to include our new Pokémon species at the right places. While the correct position for the alphabetical order is easy to find, it can become quite tedious for height and weight. To find the right position for your Pokémon, you may look at the tables sorted by [height](#pokémon-ordered-by-height) and [weight](#pokémon-ordered-by-weight) respectively in the appendix.
 
-Edit [src/data/pokemon/pokedex_orders.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/pokedex_orders.h):
+Edit [src/data/pokemon/pokedex_orders.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/pokedex_orders.h):
 
 ```diff
  const u16 gPokedexOrder_Alphabetical[] =
@@ -565,7 +565,7 @@ Edit [src/data/pokemon/pokedex_orders.h](https://github.com/rh-hideout/pokeemera
 ```
 
 ## 4. Define its species information
-Edit [src/data/pokemon/species_info.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/species_info.h):
+Edit [src/data/pokemon/species_info.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/species_info.h):
 ```diff
  const struct SpeciesInfo gSpeciesInfo[] =
  {
@@ -623,7 +623,7 @@ Edit [src/data/pokemon/species_info.h](https://github.com/rh-hideout/pokeemerald
 
 The `.` is the structure reference operator in C to refer to the member object of the structure SpeciesInfo.
 
-Notice how I also set the ability to `ABILITY_INSOMNIA`, so our little monster doesn't even need to sleep anymore. You can find the abilities for example here [include/constants/abilities.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/include/constants/abilities.h) and here [src/data/text/abilities.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/text/abilities.h).
+Notice how I also set the ability to `ABILITY_INSOMNIA`, so our little monster doesn't even need to sleep anymore. You can find the abilities for example here [include/constants/abilities.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/abilities.h) and here [src/data/text/abilities.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/text/abilities.h).
 
 You can also incorporate a 3rd ability to your species, which is intended to be a [Hidden Ability](https://bulbapedia.bulbagarden.net/wiki/Ability#Hidden_Abilities)!
 
@@ -631,7 +631,7 @@ You can also incorporate a 3rd ability to your species, which is intended to be 
 
 Let's begin with the moves that can be learned by leveling up.
 
-Append to [src/data/pokemon/level_up_learnsets.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/level_up_learnsets.h):
+Append to [src/data/pokemon/level_up_learnsets.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/level_up_learnsets.h):
 
 ```diff
 static const struct LevelUpMove sEnamorusLevelUpLearnset[] = {
@@ -666,7 +666,7 @@ static const struct LevelUpMove sEnamorusLevelUpLearnset[] = {
 
 Again, we need to register the learnset.
 
-Edit [src/data/pokemon/level_up_learnset_pointers.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/level_up_learnset_pointers.h):
+Edit [src/data/pokemon/level_up_learnset_pointers.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/level_up_learnset_pointers.h):
 
 ```diff
  const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
@@ -681,7 +681,7 @@ Edit [src/data/pokemon/level_up_learnset_pointers.h](https://github.com/rh-hideo
 
 Next we need to specify which moves can be taught via TM, HM, or Move Tutor.
 
-Append to [src/data/pokemon/teachable_learnsets.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/teachable_learnsets.h):
+Append to [src/data/pokemon/teachable_learnsets.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/teachable_learnsets.h):
 
 ```diff
 static const u16 sEnamorusTeachableLearnset[] = {
@@ -762,7 +762,7 @@ static const u16 sEnamorusTeachableLearnset[] = {
 
 Once more, we need to register the learnset.
 
-Edit [src/data/pokemon/teachable_learnset_pointers.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/teachable_learnset_pointers.h):
+Edit [src/data/pokemon/teachable_learnset_pointers.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/teachable_learnset_pointers.h):
 
 ```diff
 const u16 *const gTeachableLearnsets[NUM_SPECIES] =
@@ -775,7 +775,7 @@ const u16 *const gTeachableLearnsets[NUM_SPECIES] =
  };
 ```
 
-If you want to create a Pokémon which can breed, you will need to edit [src/data/pokemon/egg_moves.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/egg_moves.h).
+If you want to create a Pokémon which can breed, you will need to edit [src/data/pokemon/egg_moves.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/egg_moves.h).
 
 ## 6. Define its cry
 First run these command to copy the Mewtwo sound files:
@@ -784,7 +784,7 @@ cp -r sound/direct_sound_samples/cries/mewtwo.bin sound/direct_sound_samples/cri
 cp -r sound/direct_sound_samples/cries/mewtwo.aif sound/direct_sound_samples/cries/mewthree.aif
 ```
 
-In [sound/direct_sound_data.inc](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/sound/direct_sound_data.inc).
+In [sound/direct_sound_data.inc](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/sound/direct_sound_data.inc).
 
 ```diff
     .align 2
@@ -798,7 +798,7 @@ Cry_Enamorus::
 .endif
 ```
 
-And linking it in [sound/cry_tables.inc](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/sound/cry_tables.inc). `cry_reverse` in particular is for reversed cries used by moves such as Growl.
+And linking it in [sound/cry_tables.inc](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/sound/cry_tables.inc). `cry_reverse` in particular is for reversed cries used by moves such as Growl.
 
 ```diff
 ...
@@ -813,7 +813,7 @@ And linking it in [sound/cry_tables.inc](https://github.com/rh-hideout/pokeemera
 .else
 ```
 
-Mon cries are 10512Hz. Make sure to put the aif file in the directory [sound/direct_sound_samples/cries](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/sound/direct_sound_samples/cries)
+Mon cries are 10512Hz. Make sure to put the aif file in the directory [sound/direct_sound_samples/cries](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/sound/direct_sound_samples/cries)
 
 Higher frequencies may be ruined by compression. To have the cries uncompressed, follow [this](https://github.com/ShinyDragonHunter/pokefirereddx/commit/71ba1c193082817afbed9a8a0ba1d123fffb6f36#diff-e1823f56db7c2344fb9ee843e3c42797f72fa1e108e13a7080018e1db545322eR116) , then clear out the old sound bins
 
@@ -821,7 +821,7 @@ Higher frequencies may be ruined by compression. To have the cries uncompressed,
 
 We want Mewthree to evolve from Mewtwo by reaching level 100.
 
-Edit [src/data/pokemon/evolution.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/pokemon/evolution.h):
+Edit [src/data/pokemon/evolution.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/pokemon/evolution.h):
 
 ```diff
     [SPECIES_SNEASEL_HISUIAN]       = {{EVO_ITEM_DAY, ITEM_RAZOR_CLAW, SPECIES_SNEASLER},
@@ -833,7 +833,7 @@ Edit [src/data/pokemon/evolution.h](https://github.com/rh-hideout/pokeemerald-ex
 ## 8. Easy Chat about your Pokémon
 
 
-Edit [src/data/easy_chat/easy_chat_words_by_letter.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/easy_chat/easy_chat_words_by_letter.h):
+Edit [src/data/easy_chat/easy_chat_words_by_letter.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/easy_chat/easy_chat_words_by_letter.h):
 
 ```diff
  const u16 gEasyChatWordsByLetter_M[] = {
@@ -852,7 +852,7 @@ Edit [src/data/easy_chat/easy_chat_words_by_letter.h](https://github.com/rh-hide
 
 Now Mewthree really does slumber in the games code - but we won't know until we make him appear somewhere! The legend tells that Mewthree is hiding somewhere in Petalburg Woods...
 
-Edit [src/data/wild_encounters.json](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/wild_encounters.json):
+Edit [src/data/wild_encounters.json](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/wild_encounters.json):
 
 ```diff
          {

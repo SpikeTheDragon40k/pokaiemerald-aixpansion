@@ -5,7 +5,7 @@
 ![follower-npc](img/follower_npc/follower-npc.gif)
 
 ## Configs
-The configs for follower NPCs can be found in [include/config/follower_npc.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/upcoming/include/config/follower_npc.h).
+The configs for follower NPCs can be found in [include/config/follower_npc.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/config/follower_npc.h).
 
 * `FNPC_ENABLE_NPC_FOLLOWERS`: This must be set to `TRUE` in order to enable follower NPCs. It is `FALSE` by default as it adds some size to the save block.
 * `FNPC_FLAG_HEAL_AFTER_FOLLOWER_BATTLE`: The player's party can be automatically healed after every partner battle. Set it to a flag to toggle it on/off with scripts, or set it to `FNPC_ALWAYS` to have it happen every time.
@@ -30,9 +30,9 @@ The `createfollowernpc` macro will create a new follower without needing to conv
 The created follower NPC will initially be invisible until the player takes a step.
 
 ## Follower Flags
-These are required to tell the game what behavior you want the NPC follower to have. They are defined in [include/constants/follower_npc.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/upcoming/include/constants/follower_npc.h). The second list of flags is the same as the first, but with shortened names to make them easier to type when scripting. The first 7 flags in the list are individual behaviors, whereas the remaining three are bundles of flags. For example, if you use `FNPC_SURF` in `setfollowernpc`, the NPC follower will be able to Surf behind the player. If you use `FNPC_ALL_WATER` instead, the NPC follower will be able to Dive and go up Waterfalls in addition to being able to Surf. Feel free to add your own custom bundles of flags to the file to meet your needs.
+These are required to tell the game what behavior you want the NPC follower to have. They are defined in [include/constants/follower_npc.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/follower_npc.h). The second list of flags is the same as the first, but with shortened names to make them easier to type when scripting. The first 7 flags in the list are individual behaviors, whereas the remaining three are bundles of flags. For example, if you use `FNPC_SURF` in `setfollowernpc`, the NPC follower will be able to Surf behind the player. If you use `FNPC_ALL_WATER` instead, the NPC follower will be able to Dive and go up Waterfalls in addition to being able to Surf. Feel free to add your own custom bundles of flags to the file to meet your needs.
 
-To make sure the NPC follower uses the correct animation frames, you should add an entry to `gFollowerAlternateSprites` in [include/follower_npc_alternate_sprites.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/upcoming/include/follower_npc_alternate_sprites.h). Only do this if your object has distinct animation frames for different behaviors (running, biking, surfing, etc). Follow the templates for Rival May and Rival Brendan that already exist there.
+To make sure the NPC follower uses the correct animation frames, you should add an entry to `gFollowerAlternateSprites` in [include/follower_npc_alternate_sprites.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/follower_npc_alternate_sprites.h). Only do this if your object has distinct animation frames for different behaviors (running, biking, surfing, etc). Follow the templates for Rival May and Rival Brendan that already exist there.
 
 ## Follower Movements
 You can use the `applymovement` macro on an NPC follower by using `OBJ_EVENT_ID_NPC_FOLLOWER` for the object id. This is convenient for making the NPC follower walk off-screen before destroying them. If an NPC follower is not immediately next to the player while the controls aren't locked, it will try to take steps to get back into position as the player moves, sometimes walking through impassable areas (like through the middle of buildings).
@@ -54,7 +54,7 @@ The `destroyfollowernpc` macro acts similarly to `removeobject`. It removes the 
 ## Battle Partner
 If you assign a battle partner to the NPC follower, that partner will fight alongside the player in all trainer battles while the follower is present. This turns all battles into multi battles, whether against one opponent or two.
 
-You can use any battle partner that has been defined in [include/constants/battle_partner.h](https://github.com/rh-hideout/pokeemerald-expansion/blob/upcoming/include/constants/battle_partner.h). The partners' information and Pokémon teams can be set in [src/data/battle_partners.party](https://github.com/rh-hideout/pokeemerald-expansion/blob/upcoming/src/data/battle_partners.party).
+You can use any battle partner that has been defined in [include/constants/battle_partner.h](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/battle_partner.h). The partners' information and Pokémon teams can be set in [src/data/battle_partners.party](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/battle_partners.party).
 
 To change the battle partner of an existing NPC follower, you can use the `changefollowerbattler` macro with the desired partner ID. If you change the ID to `0`, the NPC follower will not participate in any battles until you change it back to a valid partner ID.
 

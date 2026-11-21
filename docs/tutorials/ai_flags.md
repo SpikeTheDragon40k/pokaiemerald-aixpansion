@@ -1,7 +1,7 @@
 # What are AI Flags?
 AI flags alter the behavior of AI controlled trainers.  These flags affect what moves the AI chooses to use, what Pokémon the AI sends out and when they decide to switch, overarching strategic choices the AI prefers to make, and more.
 
-The AI flags can be found in [`include/constants/battle_ai.h`](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/include/constants/battle_ai.h). Some flags have their own dedicated functions that affect how the AI scores its options when choosing what to do in battle, and those functions can be found in [`src/battle_ai_main.c`](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/battle_ai_main.c). Other flags are used in conditional checks to gate certain behaviour behind certain flags, which you can typically find by searching the codebase for the flag name and browsing from there.
+The AI flags can be found in [`include/constants/battle_ai.h`](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/include/constants/battle_ai.h). Some flags have their own dedicated functions that affect how the AI scores its options when choosing what to do in battle, and those functions can be found in [`src/battle_ai_main.c`](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/battle_ai_main.c). Other flags are used in conditional checks to gate certain behaviour behind certain flags, which you can typically find by searching the codebase for the flag name and browsing from there.
 
 # What flags should you use?
 When adding new AI flags it is recommended to use `AI_FLAG_CHECK_BAD_MOVE`, `AI_FLAG_CHECK_VIABILITY`, `AI_FLAG_TRY_TO_FAINT` to make sure the AI makes good decisions. It is especially important to use `AI_FLAG_CHECK_BAD_MOVE` in combination with any added flags otherwise the AI will use moves that can fail.
@@ -12,7 +12,7 @@ Other flags should be used with consideration to the circumstances.
 Adding an AI flag to a trainer is straightforward, but the process is different depending on how trainers are being defined.
 
 ## `COMPETITIVE_PARTY_SYNTAX == TRUE`
-If you are using competitive syntax parties, navigate to the trainer data in [`src/data/trainers.party`](https://github.com/rh-hideout/pokeemerald-expansion/blob/upcoming/src/data/trainers.party), find the trainer you’d like to change, and add flags like so:
+If you are using competitive syntax parties, navigate to the trainer data in [`src/data/trainers.party`](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/upcoming/src/data/trainers.party), find the trainer you’d like to change, and add flags like so:
 AI: Check Bad Move / Try to Faint / Check Viability. The name of each flag is just the constant, but without AI_FLAG at the beginning. For example, to add `AI_FLAG_SEQUENCE_SWITCHING`, any of the following will work:
 * AI_FLAG_SEQUENCE_SWITCHING
 * SEQUENCE_SWITCHING
@@ -21,7 +21,7 @@ AI: Check Bad Move / Try to Faint / Check Viability. The name of each flag is ju
 * Sequence Switching
 
 ## `COMPETITIVE_PARTY_SYNTAX != TRUE` / Not Found
-If you are not using competitive syntax parties, instead access the trainer data directly in [`src/data/trainers.h`](https://github.com/rh-hideout/pokeemerald-expansion/blob/master/src/data/trainers.h), and add flags like so, typed exactly the same as the flag names themselves:
+If you are not using competitive syntax parties, instead access the trainer data directly in [`src/data/trainers.h`](https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/src/data/trainers.h), and add flags like so, typed exactly the same as the flag names themselves:
 `.aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY`
 
 # What AI Flags does pokeemerald-expansion have?

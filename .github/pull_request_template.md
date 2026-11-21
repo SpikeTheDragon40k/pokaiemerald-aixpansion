@@ -13,7 +13,6 @@
 <!--- If any of the above are not true, submit the PR as a draft. --->
 
 <!-- AI-assisted contributions are welcome in this fork. Read CONTRIBUTING.md and AGENTS.md, linked above. --->
-<!-- Do NOT open AI-assisted PRs against upstream rh-hideout/pokeemerald-expansion. --->
 
 ## Description
 <!-- Detail the changes made, why they were made, and any important context. -->
@@ -25,11 +24,9 @@
 <!-- Format: "Fixes #2345, fixes #4523, closes #2222." Remove this section if not applicable.-->
 
 <!-- CREDITS -->
-<!-- Once your PR is submitted, leave a comment asking the bot to add you to the credits. -->
-<!-- If anybody helped with this PR, please encourage them to comment on your PR and ask the bot to add them to the credits. -->
-<!-- If somebody has contributed at any point and has indicated they wish to be credited, please ask the bot to add them to the credits. If they do not have a known GitHub account, add them to the list at bottom of `CREDITS.md`. -->
+<!-- Once your PR is submitted, add yourself to CREDITS.md or ask to be added. -->
+<!-- If anybody helped with this PR and wishes to be credited, add them to `CREDITS.md` too. -->
 <!-- EVERY contribution matters! -->
-<!-- https://github.com/rh-hideout/pokeemerald-expansion/wiki/CREDITS.md-Frequently-Asked-Questions -->
 
 ## Feature(s) this PR does NOT handle:
 <!-- If this PR contains any unfinished and non-blocking work, please list them here for clarity. -->

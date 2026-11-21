@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         Please fill in all fields with as many details as possible.
-        Once your feature request is posted, make sure you and your collaborators are added to `CREDITS.md` by [tagging the bot on GitHub](https://github.com/rh-hideout/pokeemerald-expansion/wiki/CREDITS.md-Frequently-Asked-Questions). EVERY contribution matters, even requesting issues!
+        Once your feature request is posted, make sure you and your collaborators are added to `CREDITS.md` by asking in the issue. EVERY contribution matters, even requesting issues!
   - type: markdown
     attributes:
       value: |
@@ -38,8 +38,8 @@ body:
   - type: input
     id: contact
     attributes:
-      label: Discord contact info
-      description: Provide your Discord tag here so we can contact you in case we need more details. Discussion around **pokeemerald-expansion** happens in our [Discord server](https://discord.gg/6CzjAG6GZk).
+      label: Contact info
+      description: Optional. How we can contact you if we need more details (e.g. a Discord tag). Discussion happens in this repository's GitHub issues.
       placeholder: ex. Lunos#4026
     validations:
       required: false

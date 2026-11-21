@@ -2,7 +2,7 @@
 
 This file is for LLM coding agents (Claude Code, Codex, Copilot, Cursor, Aider, …) and the people driving them. Read it before changing code. Humans are welcome to read it too.
 
-This repository is an **independent fork** of [rh-hideout/pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion), a GBA ROM-hack base built on [pret's `pokeemerald`](https://github.com/pret/pokeemerald) decompilation. The fork accepts AI-assisted contributions under the rules in [`CONTRIBUTING.md`](CONTRIBUTING.md#ai-assisted-contributions-policy). **Never open PRs, issues or comments on the upstream `rh-hideout` repository**: it bans LLM-assisted work.
+This repository is an **independent project**: a GBA ROM-hack base that started as a fork of RHH's `pokeemerald-expansion` (itself built on [pret's `pokeemerald`](https://github.com/pret/pokeemerald) decompilation) and no longer syncs with it. It accepts AI-assisted contributions under the rules in [`CONTRIBUTING.md`](CONTRIBUTING.md#ai-assisted-contributions-policy). **Only open PRs and issues on this repository**, never on RHH's: they ban LLM-assisted work.
 
 ## Golden rules
 
@@ -32,7 +32,7 @@ make check TESTS="Spikes"              # only tests whose name starts with "Spik
 make pokeemerald-test.elf TESTS="Spikes"   # test ROM you can open in mGBA to watch a test
 ```
 
-Tests run headless in `mgba-rom-test-hydra`, which the Makefile builds. CI (`.github/workflows/build.yml`) runs all three builds, `make release` and `make check` on every PR: all must pass.
+Tests run headless in `mgba-rom-test-hydra`, which the Makefile builds. CI (`.github/workflows/build.yml`) runs all three builds, `make release` and `make check` on every PR: all must pass. In this repository's CI, unused or deprecated code is an error and a **skipped test counts as a failure**, so check that your `ASSUME`s hold with the default configs.
 
 ### Writing tests
 
@@ -98,4 +98,4 @@ Generated files (anything under `build/`, `*.gbapal`, `*.4bpp`, `*.lz`, generate
 - [ ] New tests cover the new behaviour, including edge cases
 - [ ] Diff is focused and follows the style guide
 - [ ] PR description fills in the **AI assistance** section of the template, written honestly, with sources for any game mechanic
-- [ ] The PR targets **this fork**, never `rh-hideout/pokeemerald-expansion`
+- [ ] The PR targets `master` of **this repository**

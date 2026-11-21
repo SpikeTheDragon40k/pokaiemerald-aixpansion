@@ -1,8 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Upstream project (rh-hideout/pokeemerald-expansion)
-    url: https://github.com/rh-hideout/pokeemerald-expansion
-    about: This is an independent fork. Upstream does not accept LLM-assisted work, so please do not send AI-assisted issues or PRs there.
-  - name: Read our AI-assisted contribution policy
+  - name: Read our contribution policy
     url: https://github.com/SpikeTheDragon40k/porkeemerald-explansion/blob/master/CONTRIBUTING.md
-    about: LLM-assisted contributions are welcome here, as long as they build, pass tests and are disclosed.
+    about: AI-assisted contributions are welcome, as long as they build, pass tests and are disclosed.
