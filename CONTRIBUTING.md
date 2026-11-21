@@ -1,6 +1,6 @@
-# Contributing to this pokeemerald-expansion fork
+# Contributing to pokaiemerald-aixpansion
 
-First off, thanks for helping improve `pokeemerald-expansion`! ❤️
+First off, thanks for helping improve `pokaiemerald-aixpansion`! ❤️
 
 All contributions are encouraged and valued. Please make sure to read the relevant section before making your contribution! It will make it a lot easier for you and the maintainers. We're excited to see your contributions. 🎉
 
@@ -37,7 +37,7 @@ We use [GitHub](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/iss
 
 If you run into an issue with the project, open an [issue](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/issues/new).
 
-The best bug reports have enough information that we won't have to contact you for more information. We welcome all efforts to improve pokeemerald-expansion, but would be very grateful if you completed as much of the checklist as possible in your bug report. This will help other contributiors fix your issue.
+The best bug reports have enough information that we won't have to contact you for more information. We welcome all efforts to improve pokaiemerald-aixpansion, but would be very grateful if you completed as much of the checklist as possible in your bug report. This will help other contributiors fix your issue.
 
 ### What happens after I submit a bug report?
 
@@ -49,13 +49,13 @@ The best bug reports have enough information that we won't have to contact you f
 
 ## Feature Requests
 
-This section guides you through submitting a feature request for pokeemerald-expansion, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
+This section guides you through submitting a feature request for pokaiemerald-aixpansion, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
 
 - We use [GitHub](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen+label%3Afeature-request) issues to track feature requests.
 
 ### What should I do before making a feature request?
 
-- Make sure your request is in [pokeemerald-expansion's scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/issues).
+- Make sure your request is in [pokaiemerald-aixpansion's scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/issues).
 
 ### What should I do before making a feature request?
 
@@ -78,7 +78,7 @@ If you have read all of this and still need help, feel free to open an [issue](h
 
 ### What should I do before starting a pull request?
 
-- If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/) has a [guide on forking and cloning the repository](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/The-Basics-of-GitHub). Make sure you have a [local copy](INSTALL.md) of `pokeemerald-expansion`.
+- If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/) has a [guide on forking and cloning the repository](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/The-Basics-of-GitHub). Make sure you have a [local copy](INSTALL.md) of `pokaiemerald-aixpansion`.
 - Make sure your contribution is in [scope](docs/team_procedures/scope.md) - if it is not clear if something is in scope, open an [issue](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/issues).
 - All pull requests target `master`.
 - Create a new branch from the most recent `master`.
@@ -87,7 +87,7 @@ If you have read all of this and still need help, feel free to open an [issue](h
 ### How do I submit a pull request?
 
 #### 1. Get a working local copy
-If you haven't already, follow [INSTALL.md](INSTALL.md) to get a working local copy of `pokeemerald-expansion`.
+If you haven't already, follow [INSTALL.md](INSTALL.md) to get a working local copy of `pokaiemerald-aixpansion`.
 
 #### 2. Set this fork as a remote
 This will designate this repository as a remote.

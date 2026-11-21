@@ -48,7 +48,7 @@ body:
     id: version
     attributes:
       label: Version
-      description: What version of pokeemerald-expansion are you using?
+      description: What version of pokaiemerald-aixpansion are you using?
       options:
         - 1.17.2 (Latest release)
         - master (default, unreleased bugfixes)

@@ -51,16 +51,16 @@ Some tips before proceeding:
     sudo apt update && sudo apt upgrade
     ```
 
-4. Certain packages are required to build pokeemerald Expansion. Install these packages by running the following command:
+4. Certain packages are required to build pokaiemerald-aixpansion. Install these packages by running the following command:
 
     ```bash
     sudo apt install build-essential binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi git libpng-dev python3
     ```
 
-## Choosing a location to store pokeemerald Expansion, WSL1
-WSL has its own file system that's not natively accessible from Windows, but Windows files *are* accessible from WSL. So you're going to want to store pokeemerald Expansion within Windows.
+## Choosing a location to store pokaiemerald-aixpansion, WSL1
+WSL has its own file system that's not natively accessible from Windows, but Windows files *are* accessible from WSL. So you're going to want to store pokaiemerald-aixpansion within Windows.
 
-For example, say you want to store pokeemerald Expansion in **C:\Users\\_\<user>_\Desktop\decomps**. First, ensure that the folder already exists. Then, enter this command to **change directory** to said folder, where *\<user>* is your **Windows** username:
+For example, say you want to store pokaiemerald-aixpansion in **C:\Users\\_\<user>_\Desktop\decomps**. First, ensure that the folder already exists. Then, enter this command to **change directory** to said folder, where *\<user>* is your **Windows** username:
 
 ```bash
 cd /mnt/c/Users/<user>/Desktop/decomps
@@ -74,8 +74,8 @@ cd /mnt/c/Users/<user>/Desktop/decomps
 >   Note 3: Windows path names are case-insensitive so adhering to capitalization isn't needed
 </details>
 
-## Choosing a location to store pokeemerald Expansion, WSL2
-WSL has its own file system that's not natively accessible from Windows, but Windows files *are* accessible from WSL. But accessing files on the Windows file system with WSL2 is very slow, so you're going to want to store pokeemerald Expansion within WSL2.
+## Choosing a location to store pokaiemerald-aixpansion, WSL2
+WSL has its own file system that's not natively accessible from Windows, but Windows files *are* accessible from WSL. But accessing files on the Windows file system with WSL2 is very slow, so you're going to want to store pokaiemerald-aixpansion within WSL2.
 To access the files on the WSL filesystem from Windowsm, you have to open the WSL filesystem as a network attached storage in the file explorer, it should be at the bottom of the left sidebar as "Ubuntu".
 
 Thus you're going to make sure that you're in the WSL filesystem, then create the folder for decomps if it doesn't already exist, then move into that folder.

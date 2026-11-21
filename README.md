@@ -3,7 +3,7 @@
 
 # About `pokaiemerald-aixpansion`
 
-![Gif that shows debugging functionality that is unique to pokeemerald-expansion such as rerolling Trainer ID, Cheat Start, PC from Debug Menu, Debug PC Fill, Pokémon Sprite Visualizer, Debug Warp to Map, and Battle Debug Menu](https://github.com/user-attachments/assets/cf9dfbee-4c6b-4bca-8e0a-07f116ef891c) ![Gif that shows overworld functionality that is unique to pokeemerald-expansion such as indoor running, BW2 style map popups, overworld followers, DNA Splicers, Gen 1 style fishing, OW Item descriptions, Quick Run from Battle, Use Last Ball, Wild Double Battles, and Catch from EXP](https://github.com/user-attachments/assets/383af243-0904-4d41-bced-721492fbc48e) ![Gif that shows off a number of modern Pokémon battle mechanics happening in the pokeemerald-expansion engine: 2 vs 1 battles, modern Pokémon, items, moves, abilities, fully customizable opponents and partners, Trainer Slides, and generational gimmicks](https://github.com/user-attachments/assets/50c576bc-415e-4d66-a38f-ad712f3316be)
+![Gif that shows debugging functionality that is unique to pokaiemerald-aixpansion such as rerolling Trainer ID, Cheat Start, PC from Debug Menu, Debug PC Fill, Pokémon Sprite Visualizer, Debug Warp to Map, and Battle Debug Menu](https://github.com/user-attachments/assets/cf9dfbee-4c6b-4bca-8e0a-07f116ef891c) ![Gif that shows overworld functionality that is unique to pokaiemerald-aixpansion such as indoor running, BW2 style map popups, overworld followers, DNA Splicers, Gen 1 style fishing, OW Item descriptions, Quick Run from Battle, Use Last Ball, Wild Double Battles, and Catch from EXP](https://github.com/user-attachments/assets/383af243-0904-4d41-bced-721492fbc48e) ![Gif that shows off a number of modern Pokémon battle mechanics happening in the pokaiemerald-aixpansion engine: 2 vs 1 battles, modern Pokémon, items, moves, abilities, fully customizable opponents and partners, Trainer Slides, and generational gimmicks](https://github.com/user-attachments/assets/50c576bc-415e-4d66-a38f-ad712f3316be)
 
 <!-- If you want to re-record or change these gifs, here are some notes that I used: https://files.catbox.moe/05001g.md -->
 
@@ -11,7 +11,7 @@
 
 # [Features](FEATURES.md)
 
-**`pokeemerald-expansion`** offers hundreds of features from various [core series Pokémon games](https://bulbapedia.bulbagarden.net/wiki/Core_series), along with popular quality-of-life enhancements designed to streamline development and improve the player experience. A full list of those features can be found in [`FEATURES.md`](FEATURES.md).
+**`pokaiemerald-aixpansion`** offers hundreds of features from various [core series Pokémon games](https://bulbapedia.bulbagarden.net/wiki/Core_series), along with popular quality-of-life enhancements designed to streamline development and improve the player experience. A full list of those features can be found in [`FEATURES.md`](FEATURES.md).
 
 # [Credits](CREDITS.md)
 
@@ -25,11 +25,11 @@ Based off https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion, which is
 
 Please consider [crediting all contributors](CREDITS.md) involved in the project!
 
-# Choosing `pokeemerald` or **`pokeemerald-expansion`**
+# Choosing `pokeemerald` or **`pokaiemerald-aixpansion`**
 
-- **`pokeemerald-expansion`** supports multiplayer functionality with other games built on **`pokeemerald-expansion`**. It is not compatible with official Pokémon games.
-- If compatibility with official games is important, use [`pokeemerald`](https://github.com/pret/pokeemerald). Otherwise, we recommend using **`pokeemerald-expansion`**.
-- **`pokeemerald-expansion`** incorporates regular updates from `pokeemerald`, including bug fixes and documentation improvements.
+- **`pokaiemerald-aixpansion`** supports multiplayer functionality with other games built on the same base. It is not compatible with official Pokémon games.
+- If compatibility with official games is important, use [`pokeemerald`](https://github.com/pret/pokeemerald). Otherwise, we recommend using **`pokaiemerald-aixpansion`**.
+- **`pokaiemerald-aixpansion`** incorporates regular updates from `pokeemerald`, including bug fixes and documentation improvements.
 
 # [Getting Started](INSTALL.md)
 
@@ -37,17 +37,17 @@ Please consider [crediting all contributors](CREDITS.md) involved in the project
 
 If you're new to git and GitHub, [Team Aqua's Asset Repo](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/) has a [guide to forking and cloning the repository](https://github.com/Pawkkie/Team-Aquas-Asset-Repo/wiki/The-Basics-of-GitHub). Then you can follow one of the following guides:
 
-## 📥 [Installing **`pokeemerald-expansion`**](INSTALL.md)
-## 🏗️ [Building **`pokeemerald-expansion`**](INSTALL.md#Building-pokeemerald-expansion)
+## 📥 [Installing **`pokaiemerald-aixpansion`**](INSTALL.md)
+## 🏗️ [Building **`pokaiemerald-aixpansion`**](INSTALL.md#Building-pokaiemerald-aixpansion)
 ## 🚚 [Migrating from **`pokeemerald`**](INSTALL.md#Migrating-from-pokeemerald)
-## 🚀 [Updating **`pokeemerald-expansion`**](INSTALL.md#Updating-pokeemerald-expansion)
+## 🚀 [Updating **`pokaiemerald-aixpansion`**](INSTALL.md#updating)
 
 # [Documentation](https://spikethedragon40k.github.io/pokaiemerald-aixpansion/)
 
 For detailed documentation, visit the [documentation page](https://spikethedragon40k.github.io/pokaiemerald-aixpansion/) (built from [`docs/`](docs/) once GitHub Pages is enabled).
 
 # [Contributions](CONTRIBUTING.md)
-If you are looking to [report a bug](CONTRIBUTING.md#Bug-Report), [open a pull request](CONTRIBUTING.md#Pull-Requests), or [request a feature](CONTRIBUTING.md#Feature-Request), our [`CONTRIBUTING.md`](CONTRIBUTING.md) has guides for each. AI-assisted contributions are welcome in this fork, provided they build, pass the test suite and are disclosed; see the [AI-assisted contributions policy](CONTRIBUTING.md#ai-assisted-contributions-policy).
+If you are looking to [report a bug](CONTRIBUTING.md#bug-reports), [open a pull request](CONTRIBUTING.md#Pull-Requests), or [request a feature](CONTRIBUTING.md#feature-requests), our [`CONTRIBUTING.md`](CONTRIBUTING.md) has guides for each. AI-assisted contributions are welcome in this fork, provided they build, pass the test suite and are disclosed; see the [AI-assisted contributions policy](CONTRIBUTING.md#ai-assisted-contributions-policy).
 
 # [Community](https://github.com/SpikeTheDragon40k/pokaiemerald-aixpansion/issues)
 

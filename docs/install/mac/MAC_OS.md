@@ -8,7 +8,7 @@
 2.  - If libpng is **not installed**, then go to [Installing libpng (macOS)](#installing-libpng-macos).
     - If pkg-config is **not installed**, then go to [Installing pkg-config (macos)](#installing-pkg-config-macos).
     - If devkitARM is **not installed**, then go to [Installing devkitARM (macOS)](#installing-devkitarm-macos).
-    - Otherwise, **open the Terminal** and go to [Choosing where to store pokeemerald-expansion (macOS)](#choosing-where-to-store-pokeemerald-expansion-macos)
+    - Otherwise, **open the Terminal** and go to [Building pokaiemerald-aixpansion](../../../INSTALL.md#building-pokaiemerald-aixpansion)
 
 3. **Optional: To run tests**, if the homebrew environment is not installed, install the package manager using [this reference](https://brew.sh). Open your terminal and run the following commands:
 
@@ -40,7 +40,7 @@
 
     Continue to [Installing pkg-config (macOS)](#installing-pkg-config-macos) if **pkg-config is not installed**. Otherwise, continue to [Installing devkitARM (macOS)](#installing-devkitarm-macos) if **devkitARM is not installed**.
 
-    If both pkg-config and devkitARM are already installed, go to [Choosing where to store pokeemerald-expansion (macOS)](#choosing-where-to-store-pokeemerald-expansion-macos).
+    If both pkg-config and devkitARM are already installed, go to [Building pokaiemerald-aixpansion](../../../INSTALL.md#building-pokaiemerald-aixpansion).
 
 ### Installing pkg-config (macOS)
 <details>
@@ -58,7 +58,7 @@
     ```
     pkg-config is now installed.
 
-    Continue to [Installing devkitARM (macOS)](#installing-devkitarm-macos) if **devkitARM is not installed**, otherwise, go to [Choosing where to store pokeemerald-expansion (macOS)](#choosing-where-to-store-pokeemerald-expansion-macos).
+    Continue to [Installing devkitARM (macOS)](#installing-devkitarm-macos) if **devkitARM is not installed**, otherwise, go to [Building pokaiemerald-aixpansion](../../../INSTALL.md#building-pokaiemerald-aixpansion).
 
 ### Installing devkitARM (macOS)
 1. Download the `devkitpro-pacman-installer.pkg` package from [here](https://github.com/devkitPro/pacman/releases).
